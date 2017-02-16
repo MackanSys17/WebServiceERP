@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceERP", "WebApplication3\WebServiceERP.csproj", "{BB788821-5EE3-42BA-8320-C9D135F3100D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication3", "WindowsFormsApplication3\WindowsFormsApplication3.csproj", "{DB40460A-2E6A-400F-9593-92E92280E268}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryGenerator", "WindowsFormsApplication3\QueryGenerator.csproj", "{DB40460A-2E6A-400F-9593-92E92280E268}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
