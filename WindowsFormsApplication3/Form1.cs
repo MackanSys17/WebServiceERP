@@ -20,6 +20,19 @@ namespace QueryGenerator
         }
         WindowsFormsApplication3.localhost.WebService1 service = new WindowsFormsApplication3.localhost.WebService1();
 
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case 0x84:
+                    base.WndProc(ref m);
+                    if ((int)m.Result == 0x1)
+                        m.Result = (IntPtr)0x2;
+                    return;
+            }
+            base.WndProc(ref m);
+        }
+
         private void DropDownMenu(object sender, EventArgs e)
         {
         }
@@ -45,6 +58,63 @@ namespace QueryGenerator
             {
                 dataGridView1.DataSource = service.Get1();
             }
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(1);
+            Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel1.Visible = true;
+            panel1.Refresh();
+        }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel3.Visible = true;
+            panel3.Location = new Point (96, 0);
+        }
+
+        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+            panel3.Visible = false;
+            panel5.Visible = false;
+            panel4.Visible = true;
+            panel4.Location = new Point(96, 0);
+        }
+
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = true;
+            panel5.Location = new Point(96, 0);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
     }
