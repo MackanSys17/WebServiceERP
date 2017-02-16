@@ -48,7 +48,7 @@ namespace QueryGenerator
 
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        private void ChooseButton(object sender, EventArgs e)
         {
             if (bunifuDropdown1.Items.Contains("1 MetaData for employees and relative tables"))
             {
@@ -60,12 +60,12 @@ namespace QueryGenerator
             }
         }
 
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        private void MinimizeButton(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
 
-        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        private void ExitButton(object sender, EventArgs e)
         {
             Environment.Exit(1);
             Close();
@@ -76,7 +76,7 @@ namespace QueryGenerator
 
         }
 
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        private void SelectButton(object sender, EventArgs e)
         {
             panel3.Visible = false;
             panel4.Visible = false;
@@ -85,7 +85,7 @@ namespace QueryGenerator
             panel1.Refresh();
         }
 
-        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        private void InsertButton(object sender, EventArgs e)
         {
             panel1.Visible = false;
             panel4.Visible = false;
@@ -94,7 +94,7 @@ namespace QueryGenerator
             panel3.Location = new Point (96, 0);
         }
 
-        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        private void UpdateButton(object sender, EventArgs e)
         {
             panel1.Visible = false;
             panel3.Visible = false;
@@ -103,7 +103,7 @@ namespace QueryGenerator
             panel4.Location = new Point(96, 0);
         }
 
-        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        private void deleteButton(object sender, EventArgs e)
         {
             panel1.Visible = false;
             panel3.Visible = false;
