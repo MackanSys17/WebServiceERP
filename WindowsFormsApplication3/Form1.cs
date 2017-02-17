@@ -62,10 +62,30 @@ namespace QueryGenerator
             {
                 dataGridView1.DataSource = service.Get2();
             }
-            else if (bunifuDropdown1.Items.Contains("4 Employee who has been the most sick"))
+            else if (bunifuDropdown1.Items.Contains("4 Employee with most sickdays"))
                 {
                 dataGridView1.DataSource = service.Get3();
                 }
+            else if (bunifuDropdown1.Items.Contains("5 All Keys"))
+            {
+                dataGridView1.DataSource = service.Get4();
+            }
+            else if (bunifuDropdown1.Items.Contains("6 All indexes"))
+            {
+                dataGridView1.DataSource = service.Get5();
+            }
+            else if (bunifuDropdown1.Items.Contains("7 All table constraints"))
+            {
+                dataGridView1.DataSource = service.Get6();
+            }
+            else if (bunifuDropdown1.Items.Contains("8 All tables"))
+            {
+                dataGridView1.DataSource = service.Get7();
+            }
+            else if (bunifuDropdown1.Items.Contains("9 All columns from Employee"))
+            {
+                dataGridView1.DataSource = service.Get8();
+            }
         }
 
         private void MinimizeButton(object sender, EventArgs e)
