@@ -34,7 +34,7 @@ namespace WebApplication3
                         sda.SelectCommand = cmd;
                         using (DataTable dt = new DataTable())
                         {
-                            dt.TableName = "Metadata(Personel)";
+                            dt.TableName = "Uppgift 1";
                             sda.Fill(dt);
                             return dt;
                         }
@@ -57,7 +57,7 @@ namespace WebApplication3
                         sda.SelectCommand = cmd;
                         using (DataTable dt = new DataTable())
                         {
-                            dt.TableName = "Personal information";
+                            dt.TableName = "Uppgift 2";
                             sda.Fill(dt);
                             return dt;
                         }
@@ -79,7 +79,7 @@ namespace WebApplication3
                         sda.SelectCommand = cmd;
                         using (DataTable dt = new DataTable())
                         {
-                            dt.TableName = "Person most absent";
+                            dt.TableName = "Uppgift 3";
                             sda.Fill(dt);
                             return dt;
                         }
@@ -101,7 +101,7 @@ namespace WebApplication3
                         sda.SelectCommand = cmd;
                         using (DataTable dt = new DataTable())
                         {
-                            dt.TableName = "Name of Employee with most sickdays";
+                            dt.TableName = "Uppgift 4";
                             sda.Fill(dt);
                             return dt;
                         }
@@ -123,7 +123,7 @@ namespace WebApplication3
                         sda.SelectCommand = cmd;
                         using (DataTable dt = new DataTable())
                         {
-                            dt.TableName = "All keys";
+                            dt.TableName = "Uppgift 5";
                             sda.Fill(dt);
                             return dt;
                         }
@@ -145,7 +145,7 @@ namespace WebApplication3
                         sda.SelectCommand = cmd;
                         using (DataTable dt = new DataTable())
                         {
-                            dt.TableName = "All indexes";
+                            dt.TableName = "Uppgift 6";
                             sda.Fill(dt);
                             return dt;
                         }
@@ -167,7 +167,7 @@ namespace WebApplication3
                         sda.SelectCommand = cmd;
                         using (DataTable dt = new DataTable())
                         {
-                            dt.TableName = "All table constraints";
+                            dt.TableName = "Uppgift 7";
                             sda.Fill(dt);
                             return dt;
                         }
@@ -189,7 +189,7 @@ namespace WebApplication3
                         sda.SelectCommand = cmd;
                         using (DataTable dt = new DataTable())
                         {
-                            dt.TableName = "All tables";
+                            dt.TableName = "Uppgift 8";
                             sda.Fill(dt);
                             return dt;
                         }
@@ -211,7 +211,7 @@ namespace WebApplication3
                         sda.SelectCommand = cmd;
                         using (DataTable dt = new DataTable())
                         {
-                            dt.TableName = "All Employee columns";
+                            dt.TableName = "Uppgift 9";
                             sda.Fill(dt);
                             return dt;
                         }

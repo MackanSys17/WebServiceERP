@@ -58,6 +58,14 @@ namespace QueryGenerator
             {
                 dataGridView1.DataSource = service.Get1();
             }
+            else if (bunifuDropdown1.Items.Contains("3 Employees with most sickdays 2004"))
+            {
+                dataGridView1.DataSource = service.Get2();
+            }
+            else if (bunifuDropdown1.Items.Contains("4 Employee who has been the most sick"))
+                {
+                dataGridView1.DataSource = service.Get3();
+                }
         }
 
         private void MinimizeButton(object sender, EventArgs e)
