@@ -113,7 +113,7 @@ namespace QueryGenerator
             panel1.Refresh();
         }
 
-        private void InsertButton(object sender, EventArgs e)
+        private void AddButton(object sender, EventArgs e)
         {
             panel1.Visible = false;
             panel4.Visible = false;
