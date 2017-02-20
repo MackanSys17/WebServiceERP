@@ -48,7 +48,7 @@ namespace QueryGenerator
 
         }
 
-        private void ChooseButton(object sender, EventArgs e)
+        private void SelectGeneratorButton(object sender, EventArgs e)
         {
             if (bunifuDropdown1.Items.Contains("1 MetaData for employees and relative tables"))
             {
