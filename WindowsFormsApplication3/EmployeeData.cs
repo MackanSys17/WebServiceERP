@@ -179,5 +179,15 @@ namespace QueryGenerator
         {
 
         }
+
+        private void UpdatePanel(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void DeletePanel(object sender, PaintEventArgs e)
+        {
+
+        }
     }
     }

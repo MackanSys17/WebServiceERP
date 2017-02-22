@@ -728,6 +728,7 @@
             this.panel6.Size = new System.Drawing.Size(586, 293);
             this.panel6.TabIndex = 7;
             this.panel6.Visible = false;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.UpdatePanel);
             // 
             // WorkTitle2
             // 
@@ -1010,6 +1011,7 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(589, 293);
             this.panel7.TabIndex = 7;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.DeletePanel);
             // 
             // dataGridView2
             // 
