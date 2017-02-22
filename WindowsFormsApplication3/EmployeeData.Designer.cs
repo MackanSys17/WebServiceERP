@@ -85,21 +85,8 @@
             this.UpdateEmployee = new ns1.BunifuCustomLabel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.WorkTitle3 = new ns1.BunifuCustomLabel();
-            this.Email3 = new ns1.BunifuCustomLabel();
-            this.PhoneNumber3 = new ns1.BunifuCustomLabel();
-            this.PostCode3 = new ns1.BunifuCustomLabel();
-            this.Adress3 = new ns1.BunifuCustomLabel();
-            this.LastName3 = new ns1.BunifuCustomLabel();
-            this.FirstName3 = new ns1.BunifuCustomLabel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.DeleteDelete = new ns1.BunifuFlatButton();
-            this.DeleteWorkTitle = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.DeleteEmail = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.DeletePhoneNumber = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.DeletePostCode = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.DeleteAdress = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.DeleteLastName = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.DeleteFirstName = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.FindDelete = new ns1.BunifuFlatButton();
             this.SSN3 = new ns1.BunifuCustomLabel();
             this.FindSSN2 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
@@ -114,6 +101,7 @@
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // ShowQuery
@@ -170,9 +158,9 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Location = new System.Drawing.Point(2, 251);
+            this.dataGridView1.Location = new System.Drawing.Point(2, 202);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(692, 200);
+            this.dataGridView1.Size = new System.Drawing.Size(692, 249);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -478,6 +466,7 @@
             this.AddFields.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.AddFields.Textcolor = System.Drawing.Color.White;
             this.AddFields.TextFont = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddFields.Click += new System.EventHandler(this.AddFieldsButton);
             // 
             // ClearFields
             // 
@@ -514,6 +503,7 @@
             this.ClearFields.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ClearFields.Textcolor = System.Drawing.Color.White;
             this.ClearFields.TextFont = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearFields.Click += new System.EventHandler(this.ClearFieldsButton);
             // 
             // WorkTitle1
             // 
@@ -851,6 +841,7 @@
             this.UpdateUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.UpdateUpdate.Textcolor = System.Drawing.Color.White;
             this.UpdateUpdate.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateUpdate.Click += new System.EventHandler(this.UpdateUpdateButton);
             // 
             // UpdateWorkTitle
             // 
@@ -963,6 +954,7 @@
             this.FindUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.FindUpdate.Textcolor = System.Drawing.Color.White;
             this.FindUpdate.TextFont = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FindUpdate.Click += new System.EventHandler(this.FindUpdateButton);
             // 
             // SSN2
             // 
@@ -1012,102 +1004,22 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.WorkTitle3);
-            this.panel7.Controls.Add(this.Email3);
-            this.panel7.Controls.Add(this.PhoneNumber3);
-            this.panel7.Controls.Add(this.PostCode3);
-            this.panel7.Controls.Add(this.Adress3);
-            this.panel7.Controls.Add(this.LastName3);
-            this.panel7.Controls.Add(this.FirstName3);
+            this.panel7.Controls.Add(this.dataGridView2);
             this.panel7.Controls.Add(this.DeleteDelete);
-            this.panel7.Controls.Add(this.DeleteWorkTitle);
-            this.panel7.Controls.Add(this.DeleteEmail);
-            this.panel7.Controls.Add(this.DeletePhoneNumber);
-            this.panel7.Controls.Add(this.DeletePostCode);
-            this.panel7.Controls.Add(this.DeleteAdress);
-            this.panel7.Controls.Add(this.DeleteLastName);
-            this.panel7.Controls.Add(this.DeleteFirstName);
             this.panel7.Location = new System.Drawing.Point(26, 135);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(589, 293);
             this.panel7.TabIndex = 7;
             // 
-            // WorkTitle3
+            // dataGridView2
             // 
-            this.WorkTitle3.AutoSize = true;
-            this.WorkTitle3.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WorkTitle3.ForeColor = System.Drawing.Color.White;
-            this.WorkTitle3.Location = new System.Drawing.Point(318, 139);
-            this.WorkTitle3.Name = "WorkTitle3";
-            this.WorkTitle3.Size = new System.Drawing.Size(89, 22);
-            this.WorkTitle3.TabIndex = 29;
-            this.WorkTitle3.Text = "Work titel";
-            // 
-            // Email3
-            // 
-            this.Email3.AutoSize = true;
-            this.Email3.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email3.ForeColor = System.Drawing.Color.White;
-            this.Email3.Location = new System.Drawing.Point(318, 73);
-            this.Email3.Name = "Email3";
-            this.Email3.Size = new System.Drawing.Size(56, 22);
-            this.Email3.TabIndex = 28;
-            this.Email3.Text = "Email";
-            // 
-            // PhoneNumber3
-            // 
-            this.PhoneNumber3.AutoSize = true;
-            this.PhoneNumber3.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneNumber3.ForeColor = System.Drawing.Color.White;
-            this.PhoneNumber3.Location = new System.Drawing.Point(318, 11);
-            this.PhoneNumber3.Name = "PhoneNumber3";
-            this.PhoneNumber3.Size = new System.Drawing.Size(124, 22);
-            this.PhoneNumber3.TabIndex = 27;
-            this.PhoneNumber3.Text = "Phone number";
-            // 
-            // PostCode3
-            // 
-            this.PostCode3.AutoSize = true;
-            this.PostCode3.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PostCode3.ForeColor = System.Drawing.Color.White;
-            this.PostCode3.Location = new System.Drawing.Point(31, 207);
-            this.PostCode3.Name = "PostCode3";
-            this.PostCode3.Size = new System.Drawing.Size(85, 22);
-            this.PostCode3.TabIndex = 26;
-            this.PostCode3.Text = "Post code";
-            // 
-            // Adress3
-            // 
-            this.Adress3.AutoSize = true;
-            this.Adress3.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Adress3.ForeColor = System.Drawing.Color.White;
-            this.Adress3.Location = new System.Drawing.Point(31, 139);
-            this.Adress3.Name = "Adress3";
-            this.Adress3.Size = new System.Drawing.Size(63, 22);
-            this.Adress3.TabIndex = 25;
-            this.Adress3.Text = "Adress";
-            // 
-            // LastName3
-            // 
-            this.LastName3.AutoSize = true;
-            this.LastName3.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastName3.ForeColor = System.Drawing.Color.White;
-            this.LastName3.Location = new System.Drawing.Point(31, 73);
-            this.LastName3.Name = "LastName3";
-            this.LastName3.Size = new System.Drawing.Size(88, 22);
-            this.LastName3.TabIndex = 24;
-            this.LastName3.Text = "Last name";
-            // 
-            // FirstName3
-            // 
-            this.FirstName3.AutoSize = true;
-            this.FirstName3.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstName3.ForeColor = System.Drawing.Color.White;
-            this.FirstName3.Location = new System.Drawing.Point(31, 11);
-            this.FirstName3.Name = "FirstName3";
-            this.FirstName3.Size = new System.Drawing.Size(92, 22);
-            this.FirstName3.TabIndex = 23;
-            this.FirstName3.Text = "First name";
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(586, 242);
+            this.dataGridView2.TabIndex = 23;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeleteEmployeeDataGrid);
             // 
             // DeleteDelete
             // 
@@ -1131,7 +1043,7 @@
             this.DeleteDelete.IconVisible = true;
             this.DeleteDelete.IconZoom = 90D;
             this.DeleteDelete.IsTab = false;
-            this.DeleteDelete.Location = new System.Drawing.Point(374, 227);
+            this.DeleteDelete.Location = new System.Drawing.Point(211, 253);
             this.DeleteDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DeleteDelete.Name = "DeleteDelete";
             this.DeleteDelete.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
@@ -1144,83 +1056,7 @@
             this.DeleteDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.DeleteDelete.Textcolor = System.Drawing.Color.White;
             this.DeleteDelete.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // DeleteWorkTitle
-            // 
-            this.DeleteWorkTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.DeleteWorkTitle.BorderColor = System.Drawing.Color.White;
-            this.DeleteWorkTitle.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteWorkTitle.ForeColor = System.Drawing.Color.White;
-            this.DeleteWorkTitle.Location = new System.Drawing.Point(312, 164);
-            this.DeleteWorkTitle.Name = "DeleteWorkTitle";
-            this.DeleteWorkTitle.Size = new System.Drawing.Size(246, 30);
-            this.DeleteWorkTitle.TabIndex = 21;
-            // 
-            // DeleteEmail
-            // 
-            this.DeleteEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.DeleteEmail.BorderColor = System.Drawing.Color.White;
-            this.DeleteEmail.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteEmail.ForeColor = System.Drawing.Color.White;
-            this.DeleteEmail.Location = new System.Drawing.Point(312, 98);
-            this.DeleteEmail.Name = "DeleteEmail";
-            this.DeleteEmail.Size = new System.Drawing.Size(246, 30);
-            this.DeleteEmail.TabIndex = 20;
-            // 
-            // DeletePhoneNumber
-            // 
-            this.DeletePhoneNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.DeletePhoneNumber.BorderColor = System.Drawing.Color.White;
-            this.DeletePhoneNumber.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeletePhoneNumber.ForeColor = System.Drawing.Color.White;
-            this.DeletePhoneNumber.Location = new System.Drawing.Point(312, 36);
-            this.DeletePhoneNumber.Name = "DeletePhoneNumber";
-            this.DeletePhoneNumber.Size = new System.Drawing.Size(246, 30);
-            this.DeletePhoneNumber.TabIndex = 19;
-            // 
-            // DeletePostCode
-            // 
-            this.DeletePostCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.DeletePostCode.BorderColor = System.Drawing.Color.White;
-            this.DeletePostCode.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeletePostCode.ForeColor = System.Drawing.Color.White;
-            this.DeletePostCode.Location = new System.Drawing.Point(26, 232);
-            this.DeletePostCode.Name = "DeletePostCode";
-            this.DeletePostCode.Size = new System.Drawing.Size(246, 30);
-            this.DeletePostCode.TabIndex = 18;
-            // 
-            // DeleteAdress
-            // 
-            this.DeleteAdress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.DeleteAdress.BorderColor = System.Drawing.Color.White;
-            this.DeleteAdress.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteAdress.ForeColor = System.Drawing.Color.White;
-            this.DeleteAdress.Location = new System.Drawing.Point(26, 164);
-            this.DeleteAdress.Name = "DeleteAdress";
-            this.DeleteAdress.Size = new System.Drawing.Size(246, 30);
-            this.DeleteAdress.TabIndex = 17;
-            // 
-            // DeleteLastName
-            // 
-            this.DeleteLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.DeleteLastName.BorderColor = System.Drawing.Color.White;
-            this.DeleteLastName.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteLastName.ForeColor = System.Drawing.Color.White;
-            this.DeleteLastName.Location = new System.Drawing.Point(26, 98);
-            this.DeleteLastName.Name = "DeleteLastName";
-            this.DeleteLastName.Size = new System.Drawing.Size(246, 30);
-            this.DeleteLastName.TabIndex = 16;
-            // 
-            // DeleteFirstName
-            // 
-            this.DeleteFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.DeleteFirstName.BorderColor = System.Drawing.Color.White;
-            this.DeleteFirstName.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteFirstName.ForeColor = System.Drawing.Color.White;
-            this.DeleteFirstName.Location = new System.Drawing.Point(26, 36);
-            this.DeleteFirstName.Name = "DeleteFirstName";
-            this.DeleteFirstName.Size = new System.Drawing.Size(246, 30);
-            this.DeleteFirstName.TabIndex = 15;
+            this.DeleteDelete.Click += new System.EventHandler(this.DeleteDeleteButton);
             // 
             // FindDelete
             // 
@@ -1256,6 +1092,7 @@
             this.FindDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.FindDelete.Textcolor = System.Drawing.Color.White;
             this.FindDelete.TextFont = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FindDelete.Click += new System.EventHandler(this.FindDeleteButton);
             // 
             // SSN3
             // 
@@ -1323,7 +1160,7 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1387,24 +1224,11 @@
         private ns1.BunifuCustomLabel Adress2;
         private ns1.BunifuCustomLabel LastName2;
         private System.Windows.Forms.Panel panel7;
-        private ns1.BunifuCustomLabel WorkTitle3;
-        private ns1.BunifuCustomLabel Email3;
-        private ns1.BunifuCustomLabel PhoneNumber3;
-        private ns1.BunifuCustomLabel PostCode3;
-        private ns1.BunifuCustomLabel Adress3;
-        private ns1.BunifuCustomLabel LastName3;
-        private ns1.BunifuCustomLabel FirstName3;
         private ns1.BunifuFlatButton DeleteDelete;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox DeleteWorkTitle;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox DeleteEmail;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox DeletePhoneNumber;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox DeletePostCode;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox DeleteAdress;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox DeleteLastName;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox DeleteFirstName;
         private ns1.BunifuFlatButton FindDelete;
         private ns1.BunifuCustomLabel SSN3;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox FindSSN2;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
 

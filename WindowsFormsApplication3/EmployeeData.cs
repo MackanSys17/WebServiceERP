@@ -144,5 +144,40 @@ namespace QueryGenerator
         {
 
         }
+
+        private void AddFieldsButton(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ClearFieldsButton(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FindUpdateButton(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FindDeleteButton(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateUpdateButton(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteDeleteButton(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteEmployeeDataGrid(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
     }
