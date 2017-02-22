@@ -978,6 +978,7 @@
             this.FindSSN.Name = "FindSSN";
             this.FindSSN.Size = new System.Drawing.Size(187, 30);
             this.FindSSN.TabIndex = 4;
+            this.FindSSN.TextChanged += new System.EventHandler(this.SsnUpdate);
             // 
             // UpdateEmployee
             // 
@@ -1117,6 +1118,7 @@
             this.FindSSN2.Name = "FindSSN2";
             this.FindSSN2.Size = new System.Drawing.Size(181, 30);
             this.FindSSN2.TabIndex = 4;
+            this.FindSSN2.TextChanged += new System.EventHandler(this.SsnDelete);
             // 
             // DeleteEmployee
             // 

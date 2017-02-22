@@ -189,5 +189,15 @@ namespace QueryGenerator
         {
 
         }
+
+        private void SsnUpdate(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SsnDelete(object sender, EventArgs e)
+        {
+
+        }
     }
     }
