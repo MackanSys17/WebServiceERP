@@ -48,7 +48,7 @@ namespace QueryGenerator
 
         }
 
-        private void SelectGeneratorButton(object sender, EventArgs e)
+        private void LoadTableButton(object sender, EventArgs e)
         {
             if (bunifuDropdown1.Items.Contains("1 MetaData for employees and relative tables"))
             {
@@ -145,12 +145,7 @@ namespace QueryGenerator
 
         }
 
-        private void AddFieldsButton(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ClearFieldsButton(object sender, EventArgs e)
+        private void AddEmployeeButton(object sender, EventArgs e)
         {
 
         }
@@ -190,14 +185,15 @@ namespace QueryGenerator
 
         }
 
-        private void SsnUpdate(object sender, EventArgs e)
+        private void No_Update(object sender, EventArgs e)
         {
 
         }
 
-        private void SsnDelete(object sender, EventArgs e)
+        private void No_Delete(object sender, EventArgs e)
         {
 
         }
+
     }
-    }
+}
