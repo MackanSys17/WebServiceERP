@@ -48,6 +48,8 @@ namespace WindowsFormsApplication3.localhost {
         
         private System.Threading.SendOrPostCallback Get8OperationCompleted;
         
+        private System.Threading.SendOrPostCallback findupdateemployeeOperationCompleted;
+        
         private System.Threading.SendOrPostCallback DeleteEmployeOperationCompleted;
         
         private System.Threading.SendOrPostCallback addemployeeOperationCompleted;
@@ -120,6 +122,9 @@ namespace WindowsFormsApplication3.localhost {
         
         /// <remarks/>
         public event Get8CompletedEventHandler Get8Completed;
+        
+        /// <remarks/>
+        public event findupdateemployeeCompletedEventHandler findupdateemployeeCompleted;
         
         /// <remarks/>
         public event DeleteEmployeCompletedEventHandler DeleteEmployeCompleted;
@@ -373,6 +378,33 @@ namespace WindowsFormsApplication3.localhost {
             if ((this.Get8Completed != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.Get8Completed(this, new Get8CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/findupdateemployee", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataTable findupdateemployee() {
+            object[] results = this.Invoke("findupdateemployee", new object[0]);
+            return ((System.Data.DataTable)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void findupdateemployeeAsync() {
+            this.findupdateemployeeAsync(null);
+        }
+        
+        /// <remarks/>
+        public void findupdateemployeeAsync(object userState) {
+            if ((this.findupdateemployeeOperationCompleted == null)) {
+                this.findupdateemployeeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnfindupdateemployeeOperationCompleted);
+            }
+            this.InvokeAsync("findupdateemployee", new object[0], this.findupdateemployeeOperationCompleted, userState);
+        }
+        
+        private void OnfindupdateemployeeOperationCompleted(object arg) {
+            if ((this.findupdateemployeeCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.findupdateemployeeCompleted(this, new findupdateemployeeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -721,6 +753,32 @@ namespace WindowsFormsApplication3.localhost {
         private object[] results;
         
         internal Get8CompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataTable Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataTable)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void findupdateemployeeCompletedEventHandler(object sender, findupdateemployeeCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class findupdateemployeeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal findupdateemployeeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

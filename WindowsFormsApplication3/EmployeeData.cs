@@ -152,7 +152,7 @@ namespace QueryGenerator
 
         private void FindUpdateButton(object sender, EventArgs e)
         {
-
+            dataGridView3.DataSource = service.findupdateemployee();
         }
 
         private void FindDeleteButton(object sender, EventArgs e)

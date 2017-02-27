@@ -78,6 +78,7 @@
             this.UpdateLastName = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.UpdateFirstName = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Close)).BeginInit();
@@ -89,6 +90,7 @@
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // ShowQuery
@@ -788,6 +790,7 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.dataGridView3);
             this.panel6.Controls.Add(this.WorkTitle2);
             this.panel6.Controls.Add(this.Adress2);
             this.panel6.Controls.Add(this.LastName2);
@@ -871,7 +874,7 @@
             this.UpdateUpdate.IconVisible = true;
             this.UpdateUpdate.IconZoom = 90D;
             this.UpdateUpdate.IsTab = false;
-            this.UpdateUpdate.Location = new System.Drawing.Point(256, 179);
+            this.UpdateUpdate.Location = new System.Drawing.Point(260, 258);
             this.UpdateUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.UpdateUpdate.Name = "UpdateUpdate";
             this.UpdateUpdate.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
@@ -942,6 +945,14 @@
             this.panel4.Size = new System.Drawing.Size(640, 449);
             this.panel4.TabIndex = 15;
             // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(6, 147);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(580, 98);
+            this.dataGridView3.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -975,6 +986,7 @@
             this.panel6.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1030,6 +1042,7 @@
         public WindowsFormsControlLibrary1.BunifuCustomTextbox UpdateAdress;
         public WindowsFormsControlLibrary1.BunifuCustomTextbox UpdateLastName;
         public WindowsFormsControlLibrary1.BunifuCustomTextbox UpdateFirstName;
+        private System.Windows.Forms.DataGridView dataGridView3;
     }
 }
 
