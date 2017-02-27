@@ -64,3 +64,6 @@ C:\Users\Joel\Documents\WebServiceERP\WebApplication3\bin\Microsoft.CodeDom.Prov
 C:\Users\Joel\Documents\WebServiceERP\WebApplication3\obj\Debug\WebServiceERP.csprojResolveAssemblyReference.cache
 C:\Users\Joel\Documents\WebServiceERP\WebApplication3\obj\Debug\WebApplication3.dll
 C:\Users\Joel\Documents\WebServiceERP\WebApplication3\obj\Debug\WebApplication3.pdb
+C:\Users\Joel\Documents\WebServiceERP\WebApplication3\bin\Bunifu_UI_v1.52.dll
+C:\Users\Joel\Documents\WebServiceERP\WebApplication3\bin\WindowsFormsApplication3.exe
+C:\Users\Joel\Documents\WebServiceERP\WebApplication3\bin\WindowsFormsApplication3.pdb

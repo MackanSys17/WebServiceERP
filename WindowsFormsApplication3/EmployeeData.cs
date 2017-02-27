@@ -147,7 +147,7 @@ namespace QueryGenerator
 
         private void AddEmployeeButton(object sender, EventArgs e)
         {
-
+            service.addemployee();
         }
 
         private void FindUpdateButton(object sender, EventArgs e)
@@ -157,17 +157,17 @@ namespace QueryGenerator
 
         private void FindDeleteButton(object sender, EventArgs e)
         {
-
+            dataGridView2.DataSource = service.FindEmpoyee();
         }
 
         private void UpdateUpdateButton(object sender, EventArgs e)
         {
-
+            service.updateemployee();
         }
 
         private void DeleteDeleteButton(object sender, EventArgs e)
         {
-
+            service.DeleteEmploye();
         }
 
         private void DeleteEmployeeDataGrid(object sender, DataGridViewCellEventArgs e)
@@ -190,10 +190,8 @@ namespace QueryGenerator
 
         }
 
-        private void No_Delete(object sender, EventArgs e)
+        public void No_Delete(object sender, EventArgs e)
         {
-
         }
-
     }
 }

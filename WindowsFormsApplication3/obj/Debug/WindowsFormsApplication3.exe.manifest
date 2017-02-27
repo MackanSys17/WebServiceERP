@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WindowsFormsApplication3.exe" size="30168">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WindowsFormsApplication3.exe" size="50648">
       <assemblyIdentity name="WindowsFormsApplication3" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4LqmoFHsQLYbwtLU2ym22GCXu3z7hDxZ3OHYgaFV0VA=</dsig:DigestValue>
+        <dsig:DigestValue>bR1wBRgBXmt7TK+qxkeb+58QjxrFU89kTzgUjhKduQE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

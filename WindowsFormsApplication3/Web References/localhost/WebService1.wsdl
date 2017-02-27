@@ -155,6 +155,41 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="DeleteEmploye">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteEmployeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="addemployee">
+        <s:complexType />
+      </s:element>
+      <s:element name="addemployeeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="updateemployee">
+        <s:complexType />
+      </s:element>
+      <s:element name="updateemployeeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="FindEmpoyee">
+        <s:complexType />
+      </s:element>
+      <s:element name="FindEmpoyeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindEmpoyeeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="GetSoapIn">
@@ -211,6 +246,30 @@
   <wsdl:message name="Get8SoapOut">
     <wsdl:part name="parameters" element="tns:Get8Response" />
   </wsdl:message>
+  <wsdl:message name="DeleteEmployeSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteEmploye" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEmployeSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteEmployeResponse" />
+  </wsdl:message>
+  <wsdl:message name="addemployeeSoapIn">
+    <wsdl:part name="parameters" element="tns:addemployee" />
+  </wsdl:message>
+  <wsdl:message name="addemployeeSoapOut">
+    <wsdl:part name="parameters" element="tns:addemployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateemployeeSoapIn">
+    <wsdl:part name="parameters" element="tns:updateemployee" />
+  </wsdl:message>
+  <wsdl:message name="updateemployeeSoapOut">
+    <wsdl:part name="parameters" element="tns:updateemployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindEmpoyeeSoapIn">
+    <wsdl:part name="parameters" element="tns:FindEmpoyee" />
+  </wsdl:message>
+  <wsdl:message name="FindEmpoyeeSoapOut">
+    <wsdl:part name="parameters" element="tns:FindEmpoyeeResponse" />
+  </wsdl:message>
   <wsdl:portType name="WebService1Soap">
     <wsdl:operation name="Get">
       <wsdl:input message="tns:GetSoapIn" />
@@ -247,6 +306,22 @@
     <wsdl:operation name="Get8">
       <wsdl:input message="tns:Get8SoapIn" />
       <wsdl:output message="tns:Get8SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmploye">
+      <wsdl:input message="tns:DeleteEmployeSoapIn" />
+      <wsdl:output message="tns:DeleteEmployeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addemployee">
+      <wsdl:input message="tns:addemployeeSoapIn" />
+      <wsdl:output message="tns:addemployeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateemployee">
+      <wsdl:input message="tns:updateemployeeSoapIn" />
+      <wsdl:output message="tns:updateemployeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindEmpoyee">
+      <wsdl:input message="tns:FindEmpoyeeSoapIn" />
+      <wsdl:output message="tns:FindEmpoyeeSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
@@ -332,6 +407,42 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="DeleteEmploye">
+      <soap:operation soapAction="http://tempuri.org/DeleteEmploye" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addemployee">
+      <soap:operation soapAction="http://tempuri.org/addemployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateemployee">
+      <soap:operation soapAction="http://tempuri.org/updateemployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindEmpoyee">
+      <soap:operation soapAction="http://tempuri.org/FindEmpoyee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -409,6 +520,42 @@
     </wsdl:operation>
     <wsdl:operation name="Get8">
       <soap12:operation soapAction="http://tempuri.org/Get8" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmploye">
+      <soap12:operation soapAction="http://tempuri.org/DeleteEmploye" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addemployee">
+      <soap12:operation soapAction="http://tempuri.org/addemployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateemployee">
+      <soap12:operation soapAction="http://tempuri.org/updateemployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindEmpoyee">
+      <soap12:operation soapAction="http://tempuri.org/FindEmpoyee" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

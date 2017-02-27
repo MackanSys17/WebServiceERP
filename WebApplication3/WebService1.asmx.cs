@@ -6,6 +6,9 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using QueryGenerator;
+using Bunifu;
+using System.Windows.Forms;
 
 namespace WebApplication3
 {
@@ -18,8 +21,8 @@ namespace WebApplication3
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     // [System.Web.Script.Services.ScriptService]
     public class WebService1 : System.Web.Services.WebService
-    {
-
+    { 
+        QueryGenerator.Form1 data = new QueryGenerator.Form1();
         [WebMethod]
         public DataTable Get()
         {
@@ -219,5 +222,93 @@ namespace WebApplication3
                 }
             }
         }
-}
+        [WebMethod]
+        public void DeleteEmploye()
+        {
+            string delnr = data.FindSSN2.Text;
+            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("DELETE * FROM[CRONUS Sverige AB$Employee] where No_ =" + delnr))
+                {
+                    using (SqlDataAdapter sda = new SqlDataAdapter())
+                    {
+                        cmd.Connection = con;
+                        sda.SelectCommand = cmd;
+                    }
+                }
+            }
+        }
+
+        [WebMethod]
+        public void addemployee()
+        {
+            string sosnr = data.AddSSN.Text;
+            string name = data.AddFirstName.Text;
+            string adress = data.AddAdress.Text;
+            string lastname = data.AddLasName.Text;
+            string worktitle = data.AddWorkTitle.Text;
+            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO [CRONUS Sverige AB$Employee](No_, First_name, last_name, adress, work_title) VALUES (" + sosnr +"," + name + "," + lastname + "," +adress + "," + worktitle +")" ))
+                {
+                    using (SqlDataAdapter sda = new SqlDataAdapter())
+                    {
+                        cmd.Connection = con;
+                        sda.SelectCommand = cmd;
+                    }
+                }
+            }
+        }
+
+        [WebMethod]
+        public void updateemployee()
+        {
+            string sosnr = data.FindSSN.Text;
+            string name = data.UpdateFirstName.Text;
+            string adress = data.UpdateAdress.Text;
+            string lastname = data.UpdateLastName.Text;
+            string worktitle = data.UpdateWorkTitle.Text;
+            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("UPDATE [CRONUS Sverige AB$Employee] SET first_name = " + name + ", last_name =" + lastname +", adress =" + adress + ", work_title = " + worktitle +"WHERE No_ =" + sosnr))
+                {
+                    using (SqlDataAdapter sda = new SqlDataAdapter())
+                    {
+                        cmd.Connection = con;
+                        sda.SelectCommand = cmd;
+                    }
+                }
+            }
+        }
+
+        [WebMethod]
+        public DataTable FindEmpoyee()
+        {
+            string sosnr = data.FindSSN2.Text;
+            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM[CRONUS Sverige AB$Employee] where No_ =" + sosnr))
+                {
+                    using (SqlDataAdapter sda = new SqlDataAdapter())
+                    {
+                        cmd.Connection = con;
+                        sda.SelectCommand = cmd;
+                        using (DataTable dt = new DataTable())
+
+                        {
+
+                            dt.TableName = "Employee";
+                            sda.Fill(dt);
+                            return dt;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
