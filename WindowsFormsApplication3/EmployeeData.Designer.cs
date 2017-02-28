@@ -68,6 +68,7 @@
             this.SSN2 = new ns1.BunifuCustomLabel();
             this.FindUpdate = new ns1.BunifuFlatButton();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.WorkTitle2 = new ns1.BunifuCustomLabel();
             this.Adress2 = new ns1.BunifuCustomLabel();
             this.LastName2 = new ns1.BunifuCustomLabel();
@@ -78,7 +79,6 @@
             this.UpdateLastName = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.UpdateFirstName = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Close)).BeginInit();
@@ -89,8 +89,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // ShowQuery
@@ -101,7 +101,7 @@
             this.ShowQuery.Location = new System.Drawing.Point(204, 62);
             this.ShowQuery.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ShowQuery.Name = "ShowQuery";
-            this.ShowQuery.Size = new System.Drawing.Size(144, 18);
+            this.ShowQuery.Size = new System.Drawing.Size(176, 22);
             this.ShowQuery.TabIndex = 0;
             this.ShowQuery.Text = "Choose table to show";
             // 
@@ -137,11 +137,11 @@
             // 
             this.SelectGenerator.AutoSize = true;
             this.SelectGenerator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.SelectGenerator.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectGenerator.Font = new System.Drawing.Font("Futura LT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectGenerator.ForeColor = System.Drawing.Color.White;
             this.SelectGenerator.Location = new System.Drawing.Point(183, 7);
             this.SelectGenerator.Name = "SelectGenerator";
-            this.SelectGenerator.Size = new System.Drawing.Size(198, 29);
+            this.SelectGenerator.Size = new System.Drawing.Size(247, 38);
             this.SelectGenerator.TabIndex = 3;
             this.SelectGenerator.Text = "Cronus Database";
             // 
@@ -177,7 +177,7 @@
             this.SelectQuery.IconZoom = 90D;
             this.SelectQuery.IsTab = false;
             this.SelectQuery.Location = new System.Drawing.Point(250, 140);
-            this.SelectQuery.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SelectQuery.Margin = new System.Windows.Forms.Padding(4);
             this.SelectQuery.Name = "SelectQuery";
             this.SelectQuery.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.SelectQuery.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
@@ -246,7 +246,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(90, 944);
+            this.panel2.Size = new System.Drawing.Size(90, 446);
             this.panel2.TabIndex = 13;
             // 
             // Delete
@@ -271,7 +271,7 @@
             this.Delete.IconZoom = 90D;
             this.Delete.IsTab = false;
             this.Delete.Location = new System.Drawing.Point(4, 153);
-            this.Delete.Margin = new System.Windows.Forms.Padding(4);
+            this.Delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Delete.Name = "Delete";
             this.Delete.Normalcolor = System.Drawing.Color.Black;
             this.Delete.OnHovercolor = System.Drawing.Color.Black;
@@ -307,7 +307,7 @@
             this.Update.IconZoom = 90D;
             this.Update.IsTab = false;
             this.Update.Location = new System.Drawing.Point(12, 106);
-            this.Update.Margin = new System.Windows.Forms.Padding(4);
+            this.Update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Update.Name = "Update";
             this.Update.Normalcolor = System.Drawing.Color.Black;
             this.Update.OnHovercolor = System.Drawing.Color.Black;
@@ -343,7 +343,7 @@
             this.Add.IconZoom = 90D;
             this.Add.IsTab = false;
             this.Add.Location = new System.Drawing.Point(13, 65);
-            this.Add.Margin = new System.Windows.Forms.Padding(4);
+            this.Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Add.Name = "Add";
             this.Add.Normalcolor = System.Drawing.Color.Black;
             this.Add.OnHovercolor = System.Drawing.Color.Black;
@@ -379,7 +379,7 @@
             this.Select.IconZoom = 90D;
             this.Select.IsTab = false;
             this.Select.Location = new System.Drawing.Point(4, 24);
-            this.Select.Margin = new System.Windows.Forms.Padding(4);
+            this.Select.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Select.Name = "Select";
             this.Select.Normalcolor = System.Drawing.Color.Black;
             this.Select.OnHovercolor = System.Drawing.Color.Black;
@@ -431,7 +431,6 @@
             this.DeleteDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.DeleteDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.DeleteDelete.BorderRadius = 0;
-            this.DeleteDelete.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DeleteDelete.ButtonText = "Delete";
             this.DeleteDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteDelete.DisabledColor = System.Drawing.Color.Gray;
@@ -448,7 +447,7 @@
             this.DeleteDelete.IconVisible = true;
             this.DeleteDelete.IconZoom = 90D;
             this.DeleteDelete.IsTab = false;
-            this.DeleteDelete.Location = new System.Drawing.Point(250, 253);
+            this.DeleteDelete.Location = new System.Drawing.Point(261, 253);
             this.DeleteDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DeleteDelete.Name = "DeleteDelete";
             this.DeleteDelete.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
@@ -469,7 +468,6 @@
             this.FindDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.FindDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FindDelete.BorderRadius = 0;
-            this.FindDelete.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.FindDelete.ButtonText = "Find";
             this.FindDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FindDelete.DisabledColor = System.Drawing.Color.Gray;
@@ -485,7 +483,7 @@
             this.FindDelete.IconVisible = true;
             this.FindDelete.IconZoom = 90D;
             this.FindDelete.IsTab = false;
-            this.FindDelete.Location = new System.Drawing.Point(434, 93);
+            this.FindDelete.Location = new System.Drawing.Point(425, 93);
             this.FindDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FindDelete.Name = "FindDelete";
             this.FindDelete.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
@@ -507,7 +505,7 @@
             this.SSN3.ForeColor = System.Drawing.Color.White;
             this.SSN3.Location = new System.Drawing.Point(233, 68);
             this.SSN3.Name = "SSN3";
-            this.SSN3.Size = new System.Drawing.Size(36, 18);
+            this.SSN3.Size = new System.Drawing.Size(45, 22);
             this.SSN3.TabIndex = 5;
             this.SSN3.Text = "No_";
             // 
@@ -519,7 +517,7 @@
             this.FindSSN2.ForeColor = System.Drawing.Color.White;
             this.FindSSN2.Location = new System.Drawing.Point(237, 93);
             this.FindSSN2.Name = "FindSSN2";
-            this.FindSSN2.Size = new System.Drawing.Size(181, 25);
+            this.FindSSN2.Size = new System.Drawing.Size(181, 30);
             this.FindSSN2.TabIndex = 4;
             this.FindSSN2.TextChanged += new System.EventHandler(this.No_Delete);
             // 
@@ -527,11 +525,11 @@
             // 
             this.DeleteEmployee.AutoSize = true;
             this.DeleteEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.DeleteEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteEmployee.Font = new System.Drawing.Font("Futura LT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteEmployee.ForeColor = System.Drawing.Color.White;
             this.DeleteEmployee.Location = new System.Drawing.Point(208, 22);
             this.DeleteEmployee.Name = "DeleteEmployee";
-            this.DeleteEmployee.Size = new System.Drawing.Size(199, 29);
+            this.DeleteEmployee.Size = new System.Drawing.Size(238, 38);
             this.DeleteEmployee.TabIndex = 3;
             this.DeleteEmployee.Text = "Delete Employee";
             // 
@@ -539,11 +537,11 @@
             // 
             this.AddEmployee.AutoSize = true;
             this.AddEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.AddEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddEmployee.Font = new System.Drawing.Font("Futura LT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddEmployee.ForeColor = System.Drawing.Color.White;
             this.AddEmployee.Location = new System.Drawing.Point(208, 22);
             this.AddEmployee.Name = "AddEmployee";
-            this.AddEmployee.Size = new System.Drawing.Size(171, 29);
+            this.AddEmployee.Size = new System.Drawing.Size(211, 38);
             this.AddEmployee.TabIndex = 3;
             this.AddEmployee.Text = "Add Employee";
             // 
@@ -555,7 +553,7 @@
             this.AddFirstName.ForeColor = System.Drawing.Color.White;
             this.AddFirstName.Location = new System.Drawing.Point(55, 163);
             this.AddFirstName.Name = "AddFirstName";
-            this.AddFirstName.Size = new System.Drawing.Size(229, 25);
+            this.AddFirstName.Size = new System.Drawing.Size(229, 30);
             this.AddFirstName.TabIndex = 4;
             // 
             // AddLasName
@@ -566,7 +564,7 @@
             this.AddLasName.ForeColor = System.Drawing.Color.White;
             this.AddLasName.Location = new System.Drawing.Point(55, 227);
             this.AddLasName.Name = "AddLasName";
-            this.AddLasName.Size = new System.Drawing.Size(229, 25);
+            this.AddLasName.Size = new System.Drawing.Size(229, 30);
             this.AddLasName.TabIndex = 5;
             // 
             // AddSSN
@@ -577,7 +575,7 @@
             this.AddSSN.ForeColor = System.Drawing.Color.White;
             this.AddSSN.Location = new System.Drawing.Point(55, 98);
             this.AddSSN.Name = "AddSSN";
-            this.AddSSN.Size = new System.Drawing.Size(229, 25);
+            this.AddSSN.Size = new System.Drawing.Size(229, 30);
             this.AddSSN.TabIndex = 6;
             // 
             // AddAdress
@@ -588,7 +586,7 @@
             this.AddAdress.ForeColor = System.Drawing.Color.White;
             this.AddAdress.Location = new System.Drawing.Point(320, 98);
             this.AddAdress.Name = "AddAdress";
-            this.AddAdress.Size = new System.Drawing.Size(229, 25);
+            this.AddAdress.Size = new System.Drawing.Size(229, 30);
             this.AddAdress.TabIndex = 7;
             // 
             // AddWorkTitle
@@ -599,7 +597,7 @@
             this.AddWorkTitle.ForeColor = System.Drawing.Color.White;
             this.AddWorkTitle.Location = new System.Drawing.Point(320, 163);
             this.AddWorkTitle.Name = "AddWorkTitle";
-            this.AddWorkTitle.Size = new System.Drawing.Size(229, 25);
+            this.AddWorkTitle.Size = new System.Drawing.Size(229, 30);
             this.AddWorkTitle.TabIndex = 11;
             // 
             // FirstName1
@@ -609,7 +607,7 @@
             this.FirstName1.ForeColor = System.Drawing.Color.White;
             this.FirstName1.Location = new System.Drawing.Point(51, 138);
             this.FirstName1.Name = "FirstName1";
-            this.FirstName1.Size = new System.Drawing.Size(75, 18);
+            this.FirstName1.Size = new System.Drawing.Size(92, 22);
             this.FirstName1.TabIndex = 12;
             this.FirstName1.Text = "First name";
             // 
@@ -621,7 +619,7 @@
             this.LastName1.ForeColor = System.Drawing.Color.White;
             this.LastName1.Location = new System.Drawing.Point(55, 202);
             this.LastName1.Name = "LastName1";
-            this.LastName1.Size = new System.Drawing.Size(73, 18);
+            this.LastName1.Size = new System.Drawing.Size(88, 22);
             this.LastName1.TabIndex = 13;
             this.LastName1.Text = "Last name";
             // 
@@ -632,7 +630,7 @@
             this.SSN1.ForeColor = System.Drawing.Color.White;
             this.SSN1.Location = new System.Drawing.Point(55, 74);
             this.SSN1.Name = "SSN1";
-            this.SSN1.Size = new System.Drawing.Size(36, 18);
+            this.SSN1.Size = new System.Drawing.Size(45, 22);
             this.SSN1.TabIndex = 14;
             this.SSN1.Text = "No_";
             // 
@@ -643,7 +641,7 @@
             this.Adress1.ForeColor = System.Drawing.Color.White;
             this.Adress1.Location = new System.Drawing.Point(317, 73);
             this.Adress1.Name = "Adress1";
-            this.Adress1.Size = new System.Drawing.Size(51, 18);
+            this.Adress1.Size = new System.Drawing.Size(63, 22);
             this.Adress1.TabIndex = 15;
             this.Adress1.Text = "Adress";
             // 
@@ -654,7 +652,7 @@
             this.WorkTitle1.ForeColor = System.Drawing.Color.White;
             this.WorkTitle1.Location = new System.Drawing.Point(316, 138);
             this.WorkTitle1.Name = "WorkTitle1";
-            this.WorkTitle1.Size = new System.Drawing.Size(58, 18);
+            this.WorkTitle1.Size = new System.Drawing.Size(72, 22);
             this.WorkTitle1.TabIndex = 19;
             this.WorkTitle1.Text = "Job title";
             // 
@@ -665,7 +663,6 @@
             this.AddFields.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.AddFields.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddFields.BorderRadius = 0;
-            this.AddFields.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.AddFields.ButtonText = "Add";
             this.AddFields.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddFields.DisabledColor = System.Drawing.Color.Gray;
@@ -720,11 +717,11 @@
             // 
             this.UpdateEmployee.AutoSize = true;
             this.UpdateEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.UpdateEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateEmployee.Font = new System.Drawing.Font("Futura LT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateEmployee.ForeColor = System.Drawing.Color.White;
             this.UpdateEmployee.Location = new System.Drawing.Point(191, 19);
             this.UpdateEmployee.Name = "UpdateEmployee";
-            this.UpdateEmployee.Size = new System.Drawing.Size(206, 29);
+            this.UpdateEmployee.Size = new System.Drawing.Size(253, 38);
             this.UpdateEmployee.TabIndex = 3;
             this.UpdateEmployee.Text = "Update Employee";
             // 
@@ -736,7 +733,7 @@
             this.FindSSN.ForeColor = System.Drawing.Color.White;
             this.FindSSN.Location = new System.Drawing.Point(232, 93);
             this.FindSSN.Name = "FindSSN";
-            this.FindSSN.Size = new System.Drawing.Size(187, 25);
+            this.FindSSN.Size = new System.Drawing.Size(187, 30);
             this.FindSSN.TabIndex = 4;
             this.FindSSN.TextChanged += new System.EventHandler(this.No_Update);
             // 
@@ -747,7 +744,7 @@
             this.SSN2.ForeColor = System.Drawing.Color.White;
             this.SSN2.Location = new System.Drawing.Point(228, 68);
             this.SSN2.Name = "SSN2";
-            this.SSN2.Size = new System.Drawing.Size(36, 18);
+            this.SSN2.Size = new System.Drawing.Size(45, 22);
             this.SSN2.TabIndex = 5;
             this.SSN2.Text = "No_";
             // 
@@ -757,7 +754,6 @@
             this.FindUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.FindUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FindUpdate.BorderRadius = 0;
-            this.FindUpdate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.FindUpdate.ButtonText = "Find";
             this.FindUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FindUpdate.DisabledColor = System.Drawing.Color.Gray;
@@ -773,7 +769,7 @@
             this.FindUpdate.IconVisible = true;
             this.FindUpdate.IconZoom = 90D;
             this.FindUpdate.IsTab = false;
-            this.FindUpdate.Location = new System.Drawing.Point(431, 93);
+            this.FindUpdate.Location = new System.Drawing.Point(426, 93);
             this.FindUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FindUpdate.Name = "FindUpdate";
             this.FindUpdate.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
@@ -807,6 +803,14 @@
             this.panel6.Visible = false;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.UpdatePanel);
             // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(6, 147);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(580, 98);
+            this.dataGridView3.TabIndex = 15;
+            // 
             // WorkTitle2
             // 
             this.WorkTitle2.AutoSize = true;
@@ -814,7 +818,7 @@
             this.WorkTitle2.ForeColor = System.Drawing.Color.White;
             this.WorkTitle2.Location = new System.Drawing.Point(300, 11);
             this.WorkTitle2.Name = "WorkTitle2";
-            this.WorkTitle2.Size = new System.Drawing.Size(58, 18);
+            this.WorkTitle2.Size = new System.Drawing.Size(72, 22);
             this.WorkTitle2.TabIndex = 14;
             this.WorkTitle2.Text = "Job titel";
             // 
@@ -825,7 +829,7 @@
             this.Adress2.ForeColor = System.Drawing.Color.White;
             this.Adress2.Location = new System.Drawing.Point(300, 73);
             this.Adress2.Name = "Adress2";
-            this.Adress2.Size = new System.Drawing.Size(51, 18);
+            this.Adress2.Size = new System.Drawing.Size(63, 22);
             this.Adress2.TabIndex = 10;
             this.Adress2.Text = "Adress";
             // 
@@ -836,7 +840,7 @@
             this.LastName2.ForeColor = System.Drawing.Color.White;
             this.LastName2.Location = new System.Drawing.Point(36, 73);
             this.LastName2.Name = "LastName2";
-            this.LastName2.Size = new System.Drawing.Size(73, 18);
+            this.LastName2.Size = new System.Drawing.Size(88, 22);
             this.LastName2.TabIndex = 9;
             this.LastName2.Text = "Last name";
             // 
@@ -847,7 +851,7 @@
             this.FirstName2.ForeColor = System.Drawing.Color.White;
             this.FirstName2.Location = new System.Drawing.Point(36, 11);
             this.FirstName2.Name = "FirstName2";
-            this.FirstName2.Size = new System.Drawing.Size(75, 18);
+            this.FirstName2.Size = new System.Drawing.Size(92, 22);
             this.FirstName2.TabIndex = 8;
             this.FirstName2.Text = "First name";
             // 
@@ -857,7 +861,6 @@
             this.UpdateUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.UpdateUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.UpdateUpdate.BorderRadius = 0;
-            this.UpdateUpdate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.UpdateUpdate.ButtonText = "Update";
             this.UpdateUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.UpdateUpdate.DisabledColor = System.Drawing.Color.Gray;
@@ -874,7 +877,7 @@
             this.UpdateUpdate.IconVisible = true;
             this.UpdateUpdate.IconZoom = 90D;
             this.UpdateUpdate.IsTab = false;
-            this.UpdateUpdate.Location = new System.Drawing.Point(260, 258);
+            this.UpdateUpdate.Location = new System.Drawing.Point(261, 253);
             this.UpdateUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.UpdateUpdate.Name = "UpdateUpdate";
             this.UpdateUpdate.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
@@ -897,7 +900,7 @@
             this.UpdateWorkTitle.ForeColor = System.Drawing.Color.White;
             this.UpdateWorkTitle.Location = new System.Drawing.Point(294, 36);
             this.UpdateWorkTitle.Name = "UpdateWorkTitle";
-            this.UpdateWorkTitle.Size = new System.Drawing.Size(246, 25);
+            this.UpdateWorkTitle.Size = new System.Drawing.Size(246, 30);
             this.UpdateWorkTitle.TabIndex = 6;
             // 
             // UpdateAdress
@@ -908,7 +911,7 @@
             this.UpdateAdress.ForeColor = System.Drawing.Color.White;
             this.UpdateAdress.Location = new System.Drawing.Point(295, 98);
             this.UpdateAdress.Name = "UpdateAdress";
-            this.UpdateAdress.Size = new System.Drawing.Size(246, 25);
+            this.UpdateAdress.Size = new System.Drawing.Size(246, 30);
             this.UpdateAdress.TabIndex = 2;
             // 
             // UpdateLastName
@@ -919,7 +922,7 @@
             this.UpdateLastName.ForeColor = System.Drawing.Color.White;
             this.UpdateLastName.Location = new System.Drawing.Point(31, 98);
             this.UpdateLastName.Name = "UpdateLastName";
-            this.UpdateLastName.Size = new System.Drawing.Size(246, 25);
+            this.UpdateLastName.Size = new System.Drawing.Size(246, 30);
             this.UpdateLastName.TabIndex = 1;
             // 
             // UpdateFirstName
@@ -930,7 +933,7 @@
             this.UpdateFirstName.ForeColor = System.Drawing.Color.White;
             this.UpdateFirstName.Location = new System.Drawing.Point(31, 36);
             this.UpdateFirstName.Name = "UpdateFirstName";
-            this.UpdateFirstName.Size = new System.Drawing.Size(246, 25);
+            this.UpdateFirstName.Size = new System.Drawing.Size(246, 30);
             this.UpdateFirstName.TabIndex = 0;
             // 
             // panel4
@@ -945,20 +948,12 @@
             this.panel4.Size = new System.Drawing.Size(640, 449);
             this.panel4.TabIndex = 15;
             // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(6, 147);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(580, 98);
-            this.dataGridView3.TabIndex = 15;
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1657, 944);
+            this.ClientSize = new System.Drawing.Size(786, 446);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -984,9 +979,9 @@
             this.panel3.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
