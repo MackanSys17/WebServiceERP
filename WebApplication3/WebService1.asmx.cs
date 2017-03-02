@@ -226,10 +226,11 @@ namespace WebApplication3
         [WebMethod]
         public DataTable findupdateemployee()
         {
+            string upnr = data.FindSSN.Text;
             string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
             using (SqlConnection con = new SqlConnection(constr))
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT first_name, last_name, job_title, adress FROM [CRONUS Sverige AB$Employee]"))
+                using (SqlCommand cmd = new SqlCommand("SELECT first_name, last_name, job_title, adress FROM [CRONUS Sverige AB$Employee] WHERE No_ = " + upnr))
                 {
                     using (SqlDataAdapter sda = new SqlDataAdapter())
                     {
@@ -308,7 +309,7 @@ namespace WebApplication3
         }
 
         [WebMethod]
-        public DataTable FindEmpoyee()
+        public DataTable FindEmployee()
         {
             string sosnr = data.FindSSN2.Text;
             string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
