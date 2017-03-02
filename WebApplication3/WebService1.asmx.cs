@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.Services;
-using QueryGenerator;
-using Bunifu;
-using System.Windows.Forms;
 
 namespace WebApplication3
 {
@@ -21,53 +14,43 @@ namespace WebApplication3
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     // [System.Web.Script.Services.ScriptService]
     public class WebService1 : System.Web.Services.WebService
-    { 
+    {
         QueryGenerator.Form1 data = new QueryGenerator.Form1();
+        private SqlConnection con = new SqlConnection(@"Data Source=GEDDA;Initial Catalog=Cronus;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         [WebMethod]
         public DataTable Get()
         {
-            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
+                try {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM [CRONUS Sverige AB$Employee], [CRONUS Sverige AB$Employee Absence],[CRONUS Sverige AB$Employee Portal Setup],[CRONUS Sverige AB$Employee Qualification],[CRONUS Sverige AB$Employee Relative],[CRONUS Sverige AB$Employee Statistics Group], [CRONUS Sverige AB$Warehouse Employee]", con);                   
+                DataTable dt = new DataTable();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                        dt.TableName = "Uppgift 1";
+                        sda.Fill(dt);
+                        return dt;
+                                }
+            catch (SqlException e)
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM [CRONUS Sverige AB$Employee], [CRONUS Sverige AB$Employee Absence],[CRONUS Sverige AB$Employee Portal Setup],[CRONUS Sverige AB$EmployeeQualification], [CRONUS Sverige AB$Employee Relative], [CRONUS Sverige AB$Employee Statistics Group], [CRONUS Sverige AB$Warehouse Employee]"))
-                {
-                    using (SqlDataAdapter sda = new SqlDataAdapter())
-                    {
-                        cmd.Connection = con;
-                        sda.SelectCommand = cmd;
-                        using (DataTable dt = new DataTable())
-                        {
-                            dt.TableName = "Uppgift 1";
-                            sda.Fill(dt);
-                            return dt;
-                        }
-                    }
-                }
+                throw e;
             }
-        }
+                            }
 
-        [WebMethod]
+[WebMethod]
         public DataTable Get1()
         {
-            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
-            {
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM [CRONUS Sverige AB$Employee], [CRONUS Sverige AB$Employee Relative] where [Employee No_] = No_"))
-                {
-                    using (SqlDataAdapter sda = new SqlDataAdapter())
+                    try
                     {
-                        cmd.Connection = con;
-                        sda.SelectCommand = cmd;
-                        using (DataTable dt = new DataTable())
-                        {
-                            dt.TableName = "Uppgift 2";
-                            sda.Fill(dt);
-                            return dt;
-                        }
+                        SqlCommand cmd = new SqlCommand("SELECT * FROM [CRONUS Sverige AB$Employee], [CRONUS Sverige AB$Employee Relative] where [Employee No_] = No_", con);
+                        DataTable dt1 = new DataTable();
+                        SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                        dt1.TableName = "Uppgift 2";
+                        sda.Fill(dt1);
+                        return dt1;
                     }
-                }
+                    catch (SqlException e)
+                    {
+                        throw e;
+                    }
             }
-        }
         [WebMethod]
         public DataTable Get2()
         {
@@ -272,7 +255,7 @@ namespace WebApplication3
             string adress = data.AddAdress.Text;
             string lastname = data.AddLasName.Text;
             string worktitle = data.AddWorkTitle.Text;
-            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+            string constr = ConfigurationManager.ConnectionStrings["Data Source=GEDDA;Initial Catalog=Cronus;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"].ConnectionString;
             using (SqlConnection con = new SqlConnection(constr))
             {
                 using (SqlCommand cmd = new SqlCommand("INSERT INTO [CRONUS Sverige AB$Employee](No_, First_name, last_name, adress, work_title) VALUES (" + sosnr +"," + name + "," + lastname + "," +adress + "," + worktitle +")" ))

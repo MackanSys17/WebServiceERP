@@ -54,9 +54,10 @@ namespace QueryGenerator
             {
                 dataGridView1.DataSource = service.Get();
             }
-            else if (bunifuDropdown1.Items.Contains("2 Employees and relatives"))
+            else if (bunifuDropdown1.Items.Contains("2"))
             {
                 dataGridView1.DataSource = service.Get1();
+               
             }
             else if (bunifuDropdown1.Items.Contains("3 Employees with most sickdays 2004"))
             {
@@ -157,7 +158,7 @@ namespace QueryGenerator
 
         private void FindDeleteButton(object sender, EventArgs e)
         {
-            dataGridView2.DataSource = service.FindEmpoyee();
+            dataGridView2.DataSource = service.FindEmployee();
         }
 
         private void UpdateUpdateButton(object sender, EventArgs e)
@@ -226,6 +227,11 @@ namespace QueryGenerator
         {
             Environment.Exit(1);
             Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = service.Get1();
         }
     }
 }

@@ -190,13 +190,13 @@
       <s:element name="updateemployeeResponse">
         <s:complexType />
       </s:element>
-      <s:element name="FindEmpoyee">
+      <s:element name="FindEmployee">
         <s:complexType />
       </s:element>
-      <s:element name="FindEmpoyeeResponse">
+      <s:element name="FindEmployeeResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="FindEmpoyeeResult">
+            <s:element minOccurs="0" maxOccurs="1" name="FindEmployeeResult">
               <s:complexType>
                 <s:sequence>
                   <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
@@ -287,11 +287,11 @@
   <wsdl:message name="updateemployeeSoapOut">
     <wsdl:part name="parameters" element="tns:updateemployeeResponse" />
   </wsdl:message>
-  <wsdl:message name="FindEmpoyeeSoapIn">
-    <wsdl:part name="parameters" element="tns:FindEmpoyee" />
+  <wsdl:message name="FindEmployeeSoapIn">
+    <wsdl:part name="parameters" element="tns:FindEmployee" />
   </wsdl:message>
-  <wsdl:message name="FindEmpoyeeSoapOut">
-    <wsdl:part name="parameters" element="tns:FindEmpoyeeResponse" />
+  <wsdl:message name="FindEmployeeSoapOut">
+    <wsdl:part name="parameters" element="tns:FindEmployeeResponse" />
   </wsdl:message>
   <wsdl:portType name="WebService1Soap">
     <wsdl:operation name="Get">
@@ -346,9 +346,9 @@
       <wsdl:input message="tns:updateemployeeSoapIn" />
       <wsdl:output message="tns:updateemployeeSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="FindEmpoyee">
-      <wsdl:input message="tns:FindEmpoyeeSoapIn" />
-      <wsdl:output message="tns:FindEmpoyeeSoapOut" />
+    <wsdl:operation name="FindEmployee">
+      <wsdl:input message="tns:FindEmployeeSoapIn" />
+      <wsdl:output message="tns:FindEmployeeSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
@@ -470,8 +470,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="FindEmpoyee">
-      <soap:operation soapAction="http://tempuri.org/FindEmpoyee" style="document" />
+    <wsdl:operation name="FindEmployee">
+      <soap:operation soapAction="http://tempuri.org/FindEmployee" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -599,8 +599,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="FindEmpoyee">
-      <soap12:operation soapAction="http://tempuri.org/FindEmpoyee" style="document" />
+    <wsdl:operation name="FindEmployee">
+      <soap12:operation soapAction="http://tempuri.org/FindEmployee" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
