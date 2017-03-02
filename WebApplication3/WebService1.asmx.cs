@@ -17,6 +17,9 @@ namespace WebApplication3
     {
         QueryGenerator.Form1 data = new QueryGenerator.Form1();
         private SqlConnection con = new SqlConnection(@"Data Source=GEDDA;Initial Catalog=Cronus;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+
+
+
         [WebMethod]
         public DataTable Get()
         {
@@ -34,7 +37,7 @@ namespace WebApplication3
             }
                             }
 
-[WebMethod]
+                    [WebMethod]
         public DataTable Get1()
         {
                     try
@@ -54,158 +57,124 @@ namespace WebApplication3
         [WebMethod]
         public DataTable Get2()
         {
-            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM [CRONUS Sverige AB$Employee Absence], [CRONUS Sverige AB$Employee] where [Employee No_] = No_ and [From Date] like '%2004%'"))
-                {
-                    using (SqlDataAdapter sda = new SqlDataAdapter())
-                    {
-                        cmd.Connection = con;
-                        sda.SelectCommand = cmd;
-                        using (DataTable dt = new DataTable())
-                        {
-                            dt.TableName = "Uppgift 3";
-                            sda.Fill(dt);
-                            return dt;
-                        }
-                    }
-                }
+                SqlCommand cmd = new SqlCommand("SELECT * FROM[CRONUS Sverige AB$Employee Absence], [CRONUS Sverige AB$Employee] where[Employee No_] = No_ and[From Date] like '%2004%'", con);
+                DataTable dt2 = new DataTable();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                dt2.TableName = "Uppgift 3";
+                sda.Fill(dt2);
+                return dt2;
+            }
+            catch (SqlException e)
+            {
+                throw e;
             }
         }
+
         [WebMethod]
         public DataTable Get3()
         {
-            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT [First Name], count(*)  as 'Sickdays' FROM [CRONUS Sverige AB$Employee Absence], [CRONUS Sverige AB$Employee] where [Employee No_] = No_  group by [First Name] Order by COUNT(*) DESC"))
-                {
-                    using (SqlDataAdapter sda = new SqlDataAdapter())
-                    {
-                        cmd.Connection = con;
-                        sda.SelectCommand = cmd;
-                        using (DataTable dt = new DataTable())
-                        {
-                            dt.TableName = "Uppgift 4";
-                            sda.Fill(dt);
-                            return dt;
-                        }
-                    }
-                }
+                SqlCommand cmd = new SqlCommand("SELECT [First Name], count(*)  as 'Sickdays' FROM [CRONUS Sverige AB$Employee Absence], [CRONUS Sverige AB$Employee] where [Employee No_] = No_  group by [First Name] Order by COUNT(*) DESC", con);
+                DataTable dt3 = new DataTable();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                dt3.TableName = "Uppgift 4";
+                sda.Fill(dt3);
+                return dt3;
+            }
+            catch (SqlException e)
+            {
+                throw e;
             }
         }
         [WebMethod]
         public DataTable Get4()
         {
-            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT OBJECT_NAME (OBJECT_ID) AS NameofConstraint, SCHEMA_NAME (schema_id) AS SchemaName,OBJECT_NAME (parent_object_id) AS TableName,type_desc AS ConstraintType FROM sys.objects WHERE type_desc IN ('FOREIGN_KEY_CONSTRAINT', 'PRIMARY_KEY_CONSTRAINT')GO"))
-                {
-                    using (SqlDataAdapter sda = new SqlDataAdapter())
-                    {
-                        cmd.Connection = con;
-                        sda.SelectCommand = cmd;
-                        using (DataTable dt = new DataTable())
-                        {
-                            dt.TableName = "Uppgift 5";
-                            sda.Fill(dt);
-                            return dt;
-                        }
-                    }
-                }
+                SqlCommand cmd = new SqlCommand("SELECT OBJECT_NAME (OBJECT_ID) AS NameofConstraint, SCHEMA_NAME (schema_id) AS SchemaName,OBJECT_NAME (parent_object_id) AS TableName,type_desc AS ConstraintType FROM sys.objects WHERE type_desc IN ('FOREIGN_KEY_CONSTRAINT', 'PRIMARY_KEY_CONSTRAINT')GO", con);
+                DataTable dt4 = new DataTable();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                dt4.TableName = "Uppgift 5";
+                sda.Fill(dt4);
+                return dt4;
+            }
+            catch (SqlException e)
+            {
+                throw e;
             }
         }
+
         [WebMethod]
         public DataTable Get5()
         {
-            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT so.name AS TableName, si.name AS IndexName, si.type_desc AS IndexType FROM sys.indexes si JOIN sys.objects so ON si.[object_id] = so.[object_id] WHERE so.type = 'U'--Only get indexes for User Created Tables AND si.name IS NOT NULL ORDER BY so.name, si.type"))
-                {
-                    using (SqlDataAdapter sda = new SqlDataAdapter())
-                    {
-                        cmd.Connection = con;
-                        sda.SelectCommand = cmd;
-                        using (DataTable dt = new DataTable())
-                        {
-                            dt.TableName = "Uppgift 6";
-                            sda.Fill(dt);
-                            return dt;
-                        }
-                    }
-                }
+                SqlCommand cmd = new SqlCommand("SELECT so.name AS TableName, si.name AS IndexName, si.type_desc AS IndexType FROM sys.indexes si JOIN sys.objects so ON si.[object_id] = so.[object_id] WHERE so.type = 'U'--Only get indexes for User Created Tables AND si.name IS NOT NULL ORDER BY so.name, si.type", con);
+                DataTable dt5 = new DataTable();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                dt5.TableName = "Uppgift 6";
+                sda.Fill(dt5);
+                return dt5;
+            }
+            catch (SqlException e)
+            {
+                throw e;
             }
         }
         [WebMethod]
         public DataTable Get6()
         {
-            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT TableName = t.Name, ColumnName = c.Name, dc.Name, dc.definition FROM sys.tables t INNER JOIN sys.default_constraints dc ON t.object_id = dc.parent_object_id INNER JOIN sys.columns c ON dc.parent_object_id = c.object_id AND c.column_id = dc.parent_column_id ORDER BY t.Name"))
-                {
-                    using (SqlDataAdapter sda = new SqlDataAdapter())
-                    {
-                        cmd.Connection = con;
-                        sda.SelectCommand = cmd;
-                        using (DataTable dt = new DataTable())
-                        {
-                            dt.TableName = "Uppgift 7";
-                            sda.Fill(dt);
-                            return dt;
-                        }
-                    }
-                }
+                SqlCommand cmd = new SqlCommand("SELECT TableName = t.Name, ColumnName = c.Name, dc.Name, dc.definition FROM sys.tables t INNER JOIN sys.default_constraints dc ON t.object_id = dc.parent_object_id INNER JOIN sys.columns c ON dc.parent_object_id = c.object_id AND c.column_id = dc.parent_column_id ORDER BY t.Name", con);
+                DataTable dt6 = new DataTable();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                dt6.TableName = "Uppgift 7";
+                sda.Fill(dt6);
+                return dt6;
+            }
+            catch (SqlException e)
+            {
+                throw e;
             }
         }
         [WebMethod]
         public DataTable Get7()
         {
-            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE'"))
-                {
-                    using (SqlDataAdapter sda = new SqlDataAdapter())
-                    {
-                        cmd.Connection = con;
-                        sda.SelectCommand = cmd;
-                        using (DataTable dt = new DataTable())
-                        {
-                            dt.TableName = "Uppgift 8";
-                            sda.Fill(dt);
-                            return dt;
-                        }
-                    }
-                }
+                SqlCommand cmd = new SqlCommand("SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE'", con);
+                DataTable dt7 = new DataTable();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                dt7.TableName = "Uppgift 8";
+                sda.Fill(dt7);
+                return dt7;
+            }
+            catch (SqlException e)
+            {
+                throw e;
             }
         }
         [WebMethod]
         public DataTable Get8()
         {
-            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM [CRONUS Sverige AB$Employee]"))
-                {
-                    using (SqlDataAdapter sda = new SqlDataAdapter())
-                    {
-                        cmd.Connection = con;
-                        sda.SelectCommand = cmd;
-                        using (DataTable dt = new DataTable())
-                        {
-                            dt.TableName = "Uppgift 9";
-                            sda.Fill(dt);
-                            return dt;
-                        }
-                    }
-                }
+                SqlCommand cmd = new SqlCommand("SELECT * FROM [CRONUS Sverige AB$Employee]", con);
+                DataTable dt8 = new DataTable();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                dt8.TableName = "Uppgift 9";
+                sda.Fill(dt8);
+                return dt8;
+            }
+            catch (SqlException e)
+            {
+                throw e;
             }
         }
-
         [WebMethod]
         public DataTable findupdateemployee()
         {
