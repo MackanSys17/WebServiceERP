@@ -88,12 +88,12 @@ namespace QueryGenerator
             }
         }
 
-        private void MinimizeButton(object sender, EventArgs e)
+        private void MinimizeButton1(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
 
-        private void ExitButton(object sender, EventArgs e)
+        private void ExitButton1(object sender, EventArgs e)
         {
             Environment.Exit(1);
             Close();
@@ -192,6 +192,40 @@ namespace QueryGenerator
 
         public void No_Delete(object sender, EventArgs e)
         {
+        }
+
+        private void MinimizeButton2(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void ExitButton2(object sender, EventArgs e)
+        {
+            Environment.Exit(1);
+            Close();
+
+        }
+
+        private void MinimizeButton3(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void ExitButton3(object sender, EventArgs e)
+        {
+            Environment.Exit(1);
+            Close();
+        }
+
+        private void MinimizeButton4(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void ExitButton4(object sender, EventArgs e)
+        {
+            Environment.Exit(1);
+            Close();
         }
     }
 }

@@ -12,3 +12,15 @@ C:\Users\Joel\Documents\WebServiceERP\WindowsFormsApplication3\bin\Debug\Windows
 C:\Users\Joel\Documents\WebServiceERP\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.application
 C:\Users\Joel\Documents\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe.manifest
 C:\Users\Joel\Documents\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.application
+C:\Users\Marcus\Documents\Visual Studio 2015\Projects\WebServiceERP\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
+C:\Users\Marcus\Documents\Visual Studio 2015\Projects\WebServiceERP\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.manifest
+C:\Users\Marcus\Documents\Visual Studio 2015\Projects\WebServiceERP\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.application
+C:\Users\Marcus\Documents\Visual Studio 2015\Projects\WebServiceERP\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe
+C:\Users\Marcus\Documents\Visual Studio 2015\Projects\WebServiceERP\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.pdb
+C:\Users\Marcus\Documents\Visual Studio 2015\Projects\WebServiceERP\WindowsFormsApplication3\obj\Debug\QueryGenerator.Form1.resources
+C:\Users\Marcus\Documents\Visual Studio 2015\Projects\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Properties.Resources.resources
+C:\Users\Marcus\Documents\Visual Studio 2015\Projects\WebServiceERP\WindowsFormsApplication3\obj\Debug\QueryGenerator.csproj.GenerateResource.Cache
+C:\Users\Marcus\Documents\Visual Studio 2015\Projects\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe.manifest
+C:\Users\Marcus\Documents\Visual Studio 2015\Projects\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.application
+C:\Users\Marcus\Documents\Visual Studio 2015\Projects\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
+C:\Users\Marcus\Documents\Visual Studio 2015\Projects\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
