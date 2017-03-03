@@ -16,7 +16,7 @@ namespace QueryGenerator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DatabaseDesign());
+            Application.Run(new Form1());
         }
     }
 }
