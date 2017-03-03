@@ -1,20 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using System.Configuration;
+
 
 namespace QueryGenerator
 {
-    public partial class Form1 : Form
+    public partial class DatabaseDesign : Form
     {
-        public Form1()
+        public DatabaseDesign()
         {
             InitializeComponent();
         }
@@ -202,47 +195,47 @@ namespace QueryGenerator
 
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        private void TaskButton1(object sender, EventArgs e)
         {
             dataGridView1.DataSource = service.Get();
         }
 
-        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        private void TaskButton2(object sender, EventArgs e)
         {
             dataGridView1.DataSource = service.Get1();
         }
 
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        private void TaskButton3(object sender, EventArgs e)
         {
             dataGridView1.DataSource = service.Get2();
         }
 
-        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        private void TaskButton4(object sender, EventArgs e)
         {
             dataGridView1.DataSource = service.Get3();
         }
 
-        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        private void TaskButton5(object sender, EventArgs e)
         {
             dataGridView1.DataSource = service.Get4();
         }
 
-        private void bunifuFlatButton6_Click(object sender, EventArgs e)
+        private void TaskBUtton6(object sender, EventArgs e)
         {
             dataGridView1.DataSource = service.Get5();
         }
 
-        private void bunifuFlatButton7_Click(object sender, EventArgs e)
+        private void TaskButton7(object sender, EventArgs e)
         {
             dataGridView1.DataSource = service.Get6();
         }
 
-        private void bunifuFlatButton8_Click(object sender, EventArgs e)
+        private void TaskButton8(object sender, EventArgs e)
         {
             dataGridView1.DataSource = service.Get7();
         }
 
-        private void bunifuFlatButton9_Click(object sender, EventArgs e)
+        private void TaskButton9(object sender, EventArgs e)
         {
             dataGridView1.DataSource = service.Get8();
         }

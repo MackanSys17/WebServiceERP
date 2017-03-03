@@ -15,7 +15,7 @@ namespace WebApplication3
     // [System.Web.Script.Services.ScriptService]
     public class WebService1 : System.Web.Services.WebService
     {
-        QueryGenerator.Form1 data = new QueryGenerator.Form1();
+        QueryGenerator.DatabaseDesign data = new QueryGenerator.DatabaseDesign();
         private SqlConnection con = new SqlConnection(@"Data Source=GEDDA;Initial Catalog=Cronus;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
 
