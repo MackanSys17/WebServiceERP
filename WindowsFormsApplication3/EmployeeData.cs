@@ -111,22 +111,34 @@ namespace QueryGenerator
 
         private void AddEmployeeButton(object sender, EventArgs e)
         {
-            service.addemployee();
+            string ssn = AddSSN.Text;
+            string firstname = AddFirstName.Text;
+            string adress = AddAdress.Text;
+            string lastname = AddLasName.Text;
+            string worktitle = AddWorkTitle.Text;
+            service.addemployee(ssn, firstname, adress, lastname, worktitle);
         }
 
         private void FindUpdateButton(object sender, EventArgs e)
         {
-            dataGridView3.DataSource = service.findupdateemployee();
+            string upnr = FindSSN.Text;
+            dataGridView3.DataSource = service.findupdateemployee(upnr);
         }
 
         private void FindDeleteButton(object sender, EventArgs e)
         {
-            dataGridView2.DataSource = service.FindEmployee();
+            string load = FindSSN2.Text;
+            dataGridView2.DataSource = service.FindEmployee(load);
         }
 
         private void UpdateUpdateButton(object sender, EventArgs e)
         {
-            service.updateemployee();
+            string ssn = FindSSN.Text;
+            string ufirstname = UpdateFirstName.Text;
+            string uadress = UpdateAdress.Text;
+            string ulastname = UpdateLastName.Text;
+            string uworktitle = UpdateWorkTitle.Text;
+            service.updateemployee(ssn, ufirstname, uadress, ulastname, uworktitle);
         }
 
         private void DeleteDeleteButton(object sender, EventArgs e)

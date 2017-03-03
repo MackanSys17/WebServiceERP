@@ -176,9 +176,8 @@ namespace WebApplication3
             }
         }
         [WebMethod]
-        public DataTable findupdateemployee()
+        public DataTable findupdateemployee(string upnr)
         {
-            string upnr = data.FindSSN.Text;
             try
             {
                 SqlCommand cmd = new SqlCommand("SELECT first_name, last_name, job_title, adress FROM [CRONUS Sverige AB$Employee] WHERE No_ = " + upnr, con);
@@ -197,9 +196,8 @@ namespace WebApplication3
 
 
         [WebMethod]
-        public void DeleteEmploye()
+        public void DeleteEmploye(string delnr)
         {
-            string delnr = data.FindSSN2.Text;
             try
             {
                 SqlCommand cmd = new SqlCommand("DELETE * FROM[CRONUS Sverige AB$Employee] where No_ =" + delnr, con);
@@ -211,13 +209,8 @@ namespace WebApplication3
         }
 
         [WebMethod]
-        public void addemployee()
+        public void addemployee(string sosnr, string name, string adress, string lastname, string worktitle)
         {
-            string sosnr = data.AddSSN.Text;
-            string name = data.AddFirstName.Text;
-            string adress = data.AddAdress.Text;
-            string lastname = data.AddLasName.Text;
-            string worktitle = data.AddWorkTitle.Text;
             try
             {
                 SqlCommand cmd = new SqlCommand("INSERT INTO [CRONUS Sverige AB$Employee](No_, First_name, last_name, adress, work_title) VALUES (" + sosnr + "," + name + "," + lastname + "," + adress + "," + worktitle + ")", con);
@@ -229,13 +222,8 @@ namespace WebApplication3
         }
 
     [WebMethod]
-        public void updateemployee()
+        public void updateemployee(string sosnr, string name, string adress, string lastname, string worktitle)
         {
-            string sosnr = data.FindSSN.Text;
-            string name = data.UpdateFirstName.Text;
-            string adress = data.UpdateAdress.Text;
-            string lastname = data.UpdateLastName.Text;
-            string worktitle = data.UpdateWorkTitle.Text;
             try
             {
                 SqlCommand cmd = new SqlCommand("UPDATE [CRONUS Sverige AB$Employee] SET first_name = " + name + ", last_name =" + lastname + ", adress =" + adress + ", work_title = " + worktitle + "WHERE No_ =" + sosnr, con);
@@ -248,12 +236,12 @@ namespace WebApplication3
 
 
         [WebMethod]
-        public DataTable FindEmployee()
+        public void FindEmployee(string sosnr)
         {
-            string sosnr = data.FindSSN2.Text;
             try
             {
                 SqlCommand cmd = new SqlCommand("SELECT * FROM[CRONUS Sverige AB$Employee] where No_ =" + sosnr, con);
+
             }
             catch (SqlException)
             {
