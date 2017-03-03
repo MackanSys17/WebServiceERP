@@ -143,7 +143,8 @@ namespace QueryGenerator
 
         private void DeleteDeleteButton(object sender, EventArgs e)
         {
-            service.DeleteEmploye();
+            string load = FindSSN2.Text;
+            service.DeleteEmploye(load);
         }
 
         private void DeleteEmployeeDataGrid(object sender, DataGridViewCellEventArgs e)

@@ -236,11 +236,16 @@ namespace WebApplication3
 
 
         [WebMethod]
-        public void FindEmployee(string sosnr)
+        public DataTable FindEmployee(string sosnr)
         {
             try
             {
                 SqlCommand cmd = new SqlCommand("SELECT * FROM[CRONUS Sverige AB$Employee] where No_ =" + sosnr, con);
+                DataTable dt12 = new DataTable();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                dt12.TableName = "Delete search";
+                sda.Fill(dt12);
+                return dt12;
 
             }
             catch (SqlException)
