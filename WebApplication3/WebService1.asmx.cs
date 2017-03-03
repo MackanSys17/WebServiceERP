@@ -176,7 +176,7 @@ namespace WebApplication3
             }
         }
         [WebMethod]
-        public DataTable findupdateemployee(string upnr)
+        public DataTable FindUpdateEmployee(string upnr)
         {
             try
             {
@@ -209,7 +209,7 @@ namespace WebApplication3
         }
 
         [WebMethod]
-        public void addemployee(string sosnr, string name, string adress, string lastname, string worktitle)
+        public void AddEmployee(string sosnr, string name, string adress, string lastname, string worktitle)
         {
             try
             {
@@ -222,7 +222,7 @@ namespace WebApplication3
         }
 
     [WebMethod]
-        public void updateemployee(string sosnr, string name, string adress, string lastname, string worktitle)
+        public void UpdateEmployee(string sosnr, string name, string adress, string lastname, string worktitle)
         {
             try
             {
