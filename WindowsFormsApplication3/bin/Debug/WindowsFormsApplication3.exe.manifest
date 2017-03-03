@@ -54,24 +54,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WindowsFormsApplication3.exe" size="60376">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WindowsFormsApplication3.exe" size="64472">
       <assemblyIdentity name="WindowsFormsApplication3" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>moWkesNYUEx0qVJWHx/7MwCbkBnSTQBF22DpQJzpxQw=</dsig:DigestValue>
+        <dsig:DigestValue>Pa9pCXCOjgo56KTyFUhuFPXiQ5qFTuNarUX61u4xh20=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="WindowsFormsApplication3.exe.config" size="1046">
+  <file name="WindowsFormsApplication3.exe.config" size="1143">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>qWx2lnx/RbeJ0bKuQFDssml0N+rAlxLLZG7IMKvEzjM=</dsig:DigestValue>
+      <dsig:DigestValue>TnV0rANIPOBJgk87f4DnWTb5vHqPzHqTGEf06e3d2Bk=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

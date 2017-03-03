@@ -48,13 +48,13 @@ namespace WindowsFormsApplication3.localhost {
         
         private System.Threading.SendOrPostCallback Get8OperationCompleted;
         
-        private System.Threading.SendOrPostCallback findupdateemployeeOperationCompleted;
+        private System.Threading.SendOrPostCallback FindUpdateEmployeeOperationCompleted;
         
         private System.Threading.SendOrPostCallback DeleteEmployeOperationCompleted;
         
-        private System.Threading.SendOrPostCallback addemployeeOperationCompleted;
+        private System.Threading.SendOrPostCallback AddEmployeeOperationCompleted;
         
-        private System.Threading.SendOrPostCallback updateemployeeOperationCompleted;
+        private System.Threading.SendOrPostCallback UpdateEmployeeOperationCompleted;
         
         private System.Threading.SendOrPostCallback FindEmployeeOperationCompleted;
         
@@ -124,16 +124,16 @@ namespace WindowsFormsApplication3.localhost {
         public event Get8CompletedEventHandler Get8Completed;
         
         /// <remarks/>
-        public event findupdateemployeeCompletedEventHandler findupdateemployeeCompleted;
+        public event FindUpdateEmployeeCompletedEventHandler FindUpdateEmployeeCompleted;
         
         /// <remarks/>
         public event DeleteEmployeCompletedEventHandler DeleteEmployeCompleted;
         
         /// <remarks/>
-        public event addemployeeCompletedEventHandler addemployeeCompleted;
+        public event AddEmployeeCompletedEventHandler AddEmployeeCompleted;
         
         /// <remarks/>
-        public event updateemployeeCompletedEventHandler updateemployeeCompleted;
+        public event UpdateEmployeeCompletedEventHandler UpdateEmployeeCompleted;
         
         /// <remarks/>
         public event FindEmployeeCompletedEventHandler FindEmployeeCompleted;
@@ -382,31 +382,31 @@ namespace WindowsFormsApplication3.localhost {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/findupdateemployee", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataTable findupdateemployee(string upnr) {
-            object[] results = this.Invoke("findupdateemployee", new object[] {
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/FindUpdateEmployee", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataTable FindUpdateEmployee(string upnr) {
+            object[] results = this.Invoke("FindUpdateEmployee", new object[] {
                         upnr});
             return ((System.Data.DataTable)(results[0]));
         }
         
         /// <remarks/>
-        public void findupdateemployeeAsync(string upnr) {
-            this.findupdateemployeeAsync(upnr, null);
+        public void FindUpdateEmployeeAsync(string upnr) {
+            this.FindUpdateEmployeeAsync(upnr, null);
         }
         
         /// <remarks/>
-        public void findupdateemployeeAsync(string upnr, object userState) {
-            if ((this.findupdateemployeeOperationCompleted == null)) {
-                this.findupdateemployeeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnfindupdateemployeeOperationCompleted);
+        public void FindUpdateEmployeeAsync(string upnr, object userState) {
+            if ((this.FindUpdateEmployeeOperationCompleted == null)) {
+                this.FindUpdateEmployeeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnFindUpdateEmployeeOperationCompleted);
             }
-            this.InvokeAsync("findupdateemployee", new object[] {
-                        upnr}, this.findupdateemployeeOperationCompleted, userState);
+            this.InvokeAsync("FindUpdateEmployee", new object[] {
+                        upnr}, this.FindUpdateEmployeeOperationCompleted, userState);
         }
         
-        private void OnfindupdateemployeeOperationCompleted(object arg) {
-            if ((this.findupdateemployeeCompleted != null)) {
+        private void OnFindUpdateEmployeeOperationCompleted(object arg) {
+            if ((this.FindUpdateEmployeeCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.findupdateemployeeCompleted(this, new findupdateemployeeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.FindUpdateEmployeeCompleted(this, new FindUpdateEmployeeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -439,9 +439,9 @@ namespace WindowsFormsApplication3.localhost {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/addemployee", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void addemployee(string sosnr, string name, string adress, string lastname, string worktitle) {
-            this.Invoke("addemployee", new object[] {
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/AddEmployee", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void AddEmployee(string sosnr, string name, string adress, string lastname, string worktitle) {
+            this.Invoke("AddEmployee", new object[] {
                         sosnr,
                         name,
                         adress,
@@ -450,34 +450,34 @@ namespace WindowsFormsApplication3.localhost {
         }
         
         /// <remarks/>
-        public void addemployeeAsync(string sosnr, string name, string adress, string lastname, string worktitle) {
-            this.addemployeeAsync(sosnr, name, adress, lastname, worktitle, null);
+        public void AddEmployeeAsync(string sosnr, string name, string adress, string lastname, string worktitle) {
+            this.AddEmployeeAsync(sosnr, name, adress, lastname, worktitle, null);
         }
         
         /// <remarks/>
-        public void addemployeeAsync(string sosnr, string name, string adress, string lastname, string worktitle, object userState) {
-            if ((this.addemployeeOperationCompleted == null)) {
-                this.addemployeeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaddemployeeOperationCompleted);
+        public void AddEmployeeAsync(string sosnr, string name, string adress, string lastname, string worktitle, object userState) {
+            if ((this.AddEmployeeOperationCompleted == null)) {
+                this.AddEmployeeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddEmployeeOperationCompleted);
             }
-            this.InvokeAsync("addemployee", new object[] {
+            this.InvokeAsync("AddEmployee", new object[] {
                         sosnr,
                         name,
                         adress,
                         lastname,
-                        worktitle}, this.addemployeeOperationCompleted, userState);
+                        worktitle}, this.AddEmployeeOperationCompleted, userState);
         }
         
-        private void OnaddemployeeOperationCompleted(object arg) {
-            if ((this.addemployeeCompleted != null)) {
+        private void OnAddEmployeeOperationCompleted(object arg) {
+            if ((this.AddEmployeeCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.addemployeeCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.AddEmployeeCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateemployee", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void updateemployee(string sosnr, string name, string adress, string lastname, string worktitle) {
-            this.Invoke("updateemployee", new object[] {
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/UpdateEmployee", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void UpdateEmployee(string sosnr, string name, string adress, string lastname, string worktitle) {
+            this.Invoke("UpdateEmployee", new object[] {
                         sosnr,
                         name,
                         adress,
@@ -486,35 +486,36 @@ namespace WindowsFormsApplication3.localhost {
         }
         
         /// <remarks/>
-        public void updateemployeeAsync(string sosnr, string name, string adress, string lastname, string worktitle) {
-            this.updateemployeeAsync(sosnr, name, adress, lastname, worktitle, null);
+        public void UpdateEmployeeAsync(string sosnr, string name, string adress, string lastname, string worktitle) {
+            this.UpdateEmployeeAsync(sosnr, name, adress, lastname, worktitle, null);
         }
         
         /// <remarks/>
-        public void updateemployeeAsync(string sosnr, string name, string adress, string lastname, string worktitle, object userState) {
-            if ((this.updateemployeeOperationCompleted == null)) {
-                this.updateemployeeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnupdateemployeeOperationCompleted);
+        public void UpdateEmployeeAsync(string sosnr, string name, string adress, string lastname, string worktitle, object userState) {
+            if ((this.UpdateEmployeeOperationCompleted == null)) {
+                this.UpdateEmployeeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateEmployeeOperationCompleted);
             }
-            this.InvokeAsync("updateemployee", new object[] {
+            this.InvokeAsync("UpdateEmployee", new object[] {
                         sosnr,
                         name,
                         adress,
                         lastname,
-                        worktitle}, this.updateemployeeOperationCompleted, userState);
+                        worktitle}, this.UpdateEmployeeOperationCompleted, userState);
         }
         
-        private void OnupdateemployeeOperationCompleted(object arg) {
-            if ((this.updateemployeeCompleted != null)) {
+        private void OnUpdateEmployeeOperationCompleted(object arg) {
+            if ((this.UpdateEmployeeCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.updateemployeeCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.UpdateEmployeeCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/FindEmployee", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void FindEmployee(string sosnr) {
-            this.Invoke("FindEmployee", new object[] {
+        public System.Data.DataTable FindEmployee(string sosnr) {
+            object[] results = this.Invoke("FindEmployee", new object[] {
                         sosnr});
+            return ((System.Data.DataTable)(results[0]));
         }
         
         /// <remarks/>
@@ -534,7 +535,7 @@ namespace WindowsFormsApplication3.localhost {
         private void OnFindEmployeeOperationCompleted(object arg) {
             if ((this.FindEmployeeCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.FindEmployeeCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.FindEmployeeCompleted(this, new FindEmployeeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -793,17 +794,17 @@ namespace WindowsFormsApplication3.localhost {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
-    public delegate void findupdateemployeeCompletedEventHandler(object sender, findupdateemployeeCompletedEventArgs e);
+    public delegate void FindUpdateEmployeeCompletedEventHandler(object sender, FindUpdateEmployeeCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class findupdateemployeeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class FindUpdateEmployeeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal findupdateemployeeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal FindUpdateEmployeeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -823,15 +824,37 @@ namespace WindowsFormsApplication3.localhost {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
-    public delegate void addemployeeCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    public delegate void AddEmployeeCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
-    public delegate void updateemployeeCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    public delegate void UpdateEmployeeCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
-    public delegate void FindEmployeeCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    public delegate void FindEmployeeCompletedEventHandler(object sender, FindEmployeeCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class FindEmployeeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal FindEmployeeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataTable Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataTable)(this.results[0]));
+            }
+        }
+    }
 }
 
 #pragma warning restore 1591

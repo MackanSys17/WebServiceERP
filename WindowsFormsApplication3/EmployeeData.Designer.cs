@@ -120,7 +120,7 @@
             this.ShowQuery.Location = new System.Drawing.Point(237, 39);
             this.ShowQuery.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ShowQuery.Name = "ShowQuery";
-            this.ShowQuery.Size = new System.Drawing.Size(176, 22);
+            this.ShowQuery.Size = new System.Drawing.Size(316, 40);
             this.ShowQuery.TabIndex = 0;
             this.ShowQuery.Text = "Choose table to show";
             // 
@@ -132,7 +132,7 @@
             this.SelectGenerator.ForeColor = System.Drawing.Color.White;
             this.SelectGenerator.Location = new System.Drawing.Point(183, 7);
             this.SelectGenerator.Name = "SelectGenerator";
-            this.SelectGenerator.Size = new System.Drawing.Size(245, 36);
+            this.SelectGenerator.Size = new System.Drawing.Size(446, 63);
             this.SelectGenerator.TabIndex = 3;
             this.SelectGenerator.Text = "Cronus Database";
             // 
@@ -190,7 +190,7 @@
             this.bunifuFlatButton9.IconZoom = 90D;
             this.bunifuFlatButton9.IsTab = false;
             this.bunifuFlatButton9.Location = new System.Drawing.Point(386, 149);
-            this.bunifuFlatButton9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton9.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton9.Name = "bunifuFlatButton9";
             this.bunifuFlatButton9.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton9.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -226,7 +226,7 @@
             this.bunifuFlatButton8.IconZoom = 90D;
             this.bunifuFlatButton8.IsTab = false;
             this.bunifuFlatButton8.Location = new System.Drawing.Point(387, 106);
-            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton8.Name = "bunifuFlatButton8";
             this.bunifuFlatButton8.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton8.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -262,7 +262,7 @@
             this.bunifuFlatButton7.IconZoom = 90D;
             this.bunifuFlatButton7.IsTab = false;
             this.bunifuFlatButton7.Location = new System.Drawing.Point(387, 66);
-            this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton7.Name = "bunifuFlatButton7";
             this.bunifuFlatButton7.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton7.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -298,7 +298,7 @@
             this.bunifuFlatButton6.IconZoom = 90D;
             this.bunifuFlatButton6.IsTab = false;
             this.bunifuFlatButton6.Location = new System.Drawing.Point(215, 151);
-            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton6.Name = "bunifuFlatButton6";
             this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -334,7 +334,7 @@
             this.bunifuFlatButton5.IconZoom = 90D;
             this.bunifuFlatButton5.IsTab = false;
             this.bunifuFlatButton5.Location = new System.Drawing.Point(215, 106);
-            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton5.Name = "bunifuFlatButton5";
             this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -370,7 +370,7 @@
             this.bunifuFlatButton4.IconZoom = 90D;
             this.bunifuFlatButton4.IsTab = false;
             this.bunifuFlatButton4.Location = new System.Drawing.Point(39, 106);
-            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -406,7 +406,7 @@
             this.bunifuFlatButton3.IconZoom = 90D;
             this.bunifuFlatButton3.IsTab = false;
             this.bunifuFlatButton3.Location = new System.Drawing.Point(215, 66);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -442,7 +442,7 @@
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
             this.bunifuFlatButton2.Location = new System.Drawing.Point(39, 153);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -478,7 +478,7 @@
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
             this.bunifuFlatButton1.Location = new System.Drawing.Point(39, 66);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -532,7 +532,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(90, 943);
+            this.panel2.Size = new System.Drawing.Size(90, 464);
             this.panel2.TabIndex = 13;
             // 
             // Delete
@@ -557,7 +557,7 @@
             this.Delete.IconZoom = 90D;
             this.Delete.IsTab = false;
             this.Delete.Location = new System.Drawing.Point(4, 153);
-            this.Delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Delete.Margin = new System.Windows.Forms.Padding(4);
             this.Delete.Name = "Delete";
             this.Delete.Normalcolor = System.Drawing.Color.Black;
             this.Delete.OnHovercolor = System.Drawing.Color.Black;
@@ -593,7 +593,7 @@
             this.Update.IconZoom = 90D;
             this.Update.IsTab = false;
             this.Update.Location = new System.Drawing.Point(12, 106);
-            this.Update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Update.Margin = new System.Windows.Forms.Padding(4);
             this.Update.Name = "Update";
             this.Update.Normalcolor = System.Drawing.Color.Black;
             this.Update.OnHovercolor = System.Drawing.Color.Black;
@@ -629,7 +629,7 @@
             this.Add.IconZoom = 90D;
             this.Add.IsTab = false;
             this.Add.Location = new System.Drawing.Point(13, 65);
-            this.Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Add.Margin = new System.Windows.Forms.Padding(4);
             this.Add.Name = "Add";
             this.Add.Normalcolor = System.Drawing.Color.Black;
             this.Add.OnHovercolor = System.Drawing.Color.Black;
@@ -665,7 +665,7 @@
             this.Select.IconZoom = 90D;
             this.Select.IsTab = false;
             this.Select.Location = new System.Drawing.Point(4, 24);
-            this.Select.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Select.Margin = new System.Windows.Forms.Padding(4);
             this.Select.Name = "Select";
             this.Select.Normalcolor = System.Drawing.Color.Black;
             this.Select.OnHovercolor = System.Drawing.Color.Black;
@@ -825,7 +825,7 @@
             this.SSN3.ForeColor = System.Drawing.Color.White;
             this.SSN3.Location = new System.Drawing.Point(204, 65);
             this.SSN3.Name = "SSN3";
-            this.SSN3.Size = new System.Drawing.Size(45, 22);
+            this.SSN3.Size = new System.Drawing.Size(81, 40);
             this.SSN3.TabIndex = 5;
             this.SSN3.Text = "No_";
             // 
@@ -837,7 +837,7 @@
             this.FindSSN2.ForeColor = System.Drawing.Color.White;
             this.FindSSN2.Location = new System.Drawing.Point(208, 90);
             this.FindSSN2.Name = "FindSSN2";
-            this.FindSSN2.Size = new System.Drawing.Size(181, 30);
+            this.FindSSN2.Size = new System.Drawing.Size(181, 48);
             this.FindSSN2.TabIndex = 4;
             this.FindSSN2.TextChanged += new System.EventHandler(this.No_Delete);
             // 
@@ -849,7 +849,7 @@
             this.DeleteEmployee.ForeColor = System.Drawing.Color.White;
             this.DeleteEmployee.Location = new System.Drawing.Point(201, 19);
             this.DeleteEmployee.Name = "DeleteEmployee";
-            this.DeleteEmployee.Size = new System.Drawing.Size(238, 36);
+            this.DeleteEmployee.Size = new System.Drawing.Size(439, 63);
             this.DeleteEmployee.TabIndex = 3;
             this.DeleteEmployee.Text = "Delete Employee";
             // 
@@ -861,7 +861,7 @@
             this.AddEmployee.ForeColor = System.Drawing.Color.White;
             this.AddEmployee.Location = new System.Drawing.Point(208, 22);
             this.AddEmployee.Name = "AddEmployee";
-            this.AddEmployee.Size = new System.Drawing.Size(209, 36);
+            this.AddEmployee.Size = new System.Drawing.Size(378, 63);
             this.AddEmployee.TabIndex = 3;
             this.AddEmployee.Text = "Add Employee";
             // 
@@ -873,7 +873,7 @@
             this.AddFirstName.ForeColor = System.Drawing.Color.White;
             this.AddFirstName.Location = new System.Drawing.Point(55, 163);
             this.AddFirstName.Name = "AddFirstName";
-            this.AddFirstName.Size = new System.Drawing.Size(229, 30);
+            this.AddFirstName.Size = new System.Drawing.Size(229, 48);
             this.AddFirstName.TabIndex = 4;
             // 
             // AddLasName
@@ -884,7 +884,7 @@
             this.AddLasName.ForeColor = System.Drawing.Color.White;
             this.AddLasName.Location = new System.Drawing.Point(55, 227);
             this.AddLasName.Name = "AddLasName";
-            this.AddLasName.Size = new System.Drawing.Size(229, 30);
+            this.AddLasName.Size = new System.Drawing.Size(229, 48);
             this.AddLasName.TabIndex = 5;
             // 
             // AddSSN
@@ -895,7 +895,7 @@
             this.AddSSN.ForeColor = System.Drawing.Color.White;
             this.AddSSN.Location = new System.Drawing.Point(55, 98);
             this.AddSSN.Name = "AddSSN";
-            this.AddSSN.Size = new System.Drawing.Size(229, 30);
+            this.AddSSN.Size = new System.Drawing.Size(229, 48);
             this.AddSSN.TabIndex = 6;
             // 
             // AddAdress
@@ -906,7 +906,7 @@
             this.AddAdress.ForeColor = System.Drawing.Color.White;
             this.AddAdress.Location = new System.Drawing.Point(320, 98);
             this.AddAdress.Name = "AddAdress";
-            this.AddAdress.Size = new System.Drawing.Size(229, 30);
+            this.AddAdress.Size = new System.Drawing.Size(229, 48);
             this.AddAdress.TabIndex = 7;
             // 
             // AddWorkTitle
@@ -917,7 +917,7 @@
             this.AddWorkTitle.ForeColor = System.Drawing.Color.White;
             this.AddWorkTitle.Location = new System.Drawing.Point(320, 163);
             this.AddWorkTitle.Name = "AddWorkTitle";
-            this.AddWorkTitle.Size = new System.Drawing.Size(229, 30);
+            this.AddWorkTitle.Size = new System.Drawing.Size(229, 48);
             this.AddWorkTitle.TabIndex = 11;
             // 
             // FirstName1
@@ -927,7 +927,7 @@
             this.FirstName1.ForeColor = System.Drawing.Color.White;
             this.FirstName1.Location = new System.Drawing.Point(51, 138);
             this.FirstName1.Name = "FirstName1";
-            this.FirstName1.Size = new System.Drawing.Size(92, 22);
+            this.FirstName1.Size = new System.Drawing.Size(165, 40);
             this.FirstName1.TabIndex = 12;
             this.FirstName1.Text = "First name";
             // 
@@ -939,7 +939,7 @@
             this.LastName1.ForeColor = System.Drawing.Color.White;
             this.LastName1.Location = new System.Drawing.Point(55, 202);
             this.LastName1.Name = "LastName1";
-            this.LastName1.Size = new System.Drawing.Size(88, 22);
+            this.LastName1.Size = new System.Drawing.Size(161, 40);
             this.LastName1.TabIndex = 13;
             this.LastName1.Text = "Last name";
             // 
@@ -950,7 +950,7 @@
             this.SSN1.ForeColor = System.Drawing.Color.White;
             this.SSN1.Location = new System.Drawing.Point(55, 74);
             this.SSN1.Name = "SSN1";
-            this.SSN1.Size = new System.Drawing.Size(45, 22);
+            this.SSN1.Size = new System.Drawing.Size(81, 40);
             this.SSN1.TabIndex = 14;
             this.SSN1.Text = "No_";
             // 
@@ -961,7 +961,7 @@
             this.Adress1.ForeColor = System.Drawing.Color.White;
             this.Adress1.Location = new System.Drawing.Point(317, 73);
             this.Adress1.Name = "Adress1";
-            this.Adress1.Size = new System.Drawing.Size(63, 22);
+            this.Adress1.Size = new System.Drawing.Size(112, 40);
             this.Adress1.TabIndex = 15;
             this.Adress1.Text = "Adress";
             // 
@@ -972,7 +972,7 @@
             this.WorkTitle1.ForeColor = System.Drawing.Color.White;
             this.WorkTitle1.Location = new System.Drawing.Point(316, 138);
             this.WorkTitle1.Name = "WorkTitle1";
-            this.WorkTitle1.Size = new System.Drawing.Size(72, 22);
+            this.WorkTitle1.Size = new System.Drawing.Size(125, 40);
             this.WorkTitle1.TabIndex = 19;
             this.WorkTitle1.Text = "Job title";
             // 
@@ -1073,7 +1073,7 @@
             this.UpdateEmployee.ForeColor = System.Drawing.Color.White;
             this.UpdateEmployee.Location = new System.Drawing.Point(166, 15);
             this.UpdateEmployee.Name = "UpdateEmployee";
-            this.UpdateEmployee.Size = new System.Drawing.Size(250, 36);
+            this.UpdateEmployee.Size = new System.Drawing.Size(456, 63);
             this.UpdateEmployee.TabIndex = 3;
             this.UpdateEmployee.Text = "Update Employee";
             // 
@@ -1085,7 +1085,7 @@
             this.FindSSN.ForeColor = System.Drawing.Color.White;
             this.FindSSN.Location = new System.Drawing.Point(173, 89);
             this.FindSSN.Name = "FindSSN";
-            this.FindSSN.Size = new System.Drawing.Size(187, 30);
+            this.FindSSN.Size = new System.Drawing.Size(187, 48);
             this.FindSSN.TabIndex = 4;
             this.FindSSN.TextChanged += new System.EventHandler(this.No_Update);
             // 
@@ -1096,7 +1096,7 @@
             this.SSN2.ForeColor = System.Drawing.Color.White;
             this.SSN2.Location = new System.Drawing.Point(169, 64);
             this.SSN2.Name = "SSN2";
-            this.SSN2.Size = new System.Drawing.Size(45, 22);
+            this.SSN2.Size = new System.Drawing.Size(81, 40);
             this.SSN2.TabIndex = 5;
             this.SSN2.Text = "No_";
             // 
@@ -1171,7 +1171,7 @@
             this.WorkTitle2.ForeColor = System.Drawing.Color.White;
             this.WorkTitle2.Location = new System.Drawing.Point(300, 11);
             this.WorkTitle2.Name = "WorkTitle2";
-            this.WorkTitle2.Size = new System.Drawing.Size(72, 22);
+            this.WorkTitle2.Size = new System.Drawing.Size(125, 40);
             this.WorkTitle2.TabIndex = 14;
             this.WorkTitle2.Text = "Job titel";
             // 
@@ -1182,7 +1182,7 @@
             this.Adress2.ForeColor = System.Drawing.Color.White;
             this.Adress2.Location = new System.Drawing.Point(300, 73);
             this.Adress2.Name = "Adress2";
-            this.Adress2.Size = new System.Drawing.Size(63, 22);
+            this.Adress2.Size = new System.Drawing.Size(112, 40);
             this.Adress2.TabIndex = 10;
             this.Adress2.Text = "Adress";
             // 
@@ -1193,7 +1193,7 @@
             this.LastName2.ForeColor = System.Drawing.Color.White;
             this.LastName2.Location = new System.Drawing.Point(36, 73);
             this.LastName2.Name = "LastName2";
-            this.LastName2.Size = new System.Drawing.Size(88, 22);
+            this.LastName2.Size = new System.Drawing.Size(161, 40);
             this.LastName2.TabIndex = 9;
             this.LastName2.Text = "Last name";
             // 
@@ -1204,7 +1204,7 @@
             this.FirstName2.ForeColor = System.Drawing.Color.White;
             this.FirstName2.Location = new System.Drawing.Point(36, 11);
             this.FirstName2.Name = "FirstName2";
-            this.FirstName2.Size = new System.Drawing.Size(92, 22);
+            this.FirstName2.Size = new System.Drawing.Size(165, 40);
             this.FirstName2.TabIndex = 8;
             this.FirstName2.Text = "First name";
             // 
@@ -1253,7 +1253,7 @@
             this.UpdateWorkTitle.ForeColor = System.Drawing.Color.White;
             this.UpdateWorkTitle.Location = new System.Drawing.Point(294, 36);
             this.UpdateWorkTitle.Name = "UpdateWorkTitle";
-            this.UpdateWorkTitle.Size = new System.Drawing.Size(246, 30);
+            this.UpdateWorkTitle.Size = new System.Drawing.Size(246, 48);
             this.UpdateWorkTitle.TabIndex = 6;
             // 
             // UpdateAdress
@@ -1264,7 +1264,7 @@
             this.UpdateAdress.ForeColor = System.Drawing.Color.White;
             this.UpdateAdress.Location = new System.Drawing.Point(295, 98);
             this.UpdateAdress.Name = "UpdateAdress";
-            this.UpdateAdress.Size = new System.Drawing.Size(246, 30);
+            this.UpdateAdress.Size = new System.Drawing.Size(246, 48);
             this.UpdateAdress.TabIndex = 2;
             // 
             // UpdateLastName
@@ -1275,7 +1275,7 @@
             this.UpdateLastName.ForeColor = System.Drawing.Color.White;
             this.UpdateLastName.Location = new System.Drawing.Point(31, 98);
             this.UpdateLastName.Name = "UpdateLastName";
-            this.UpdateLastName.Size = new System.Drawing.Size(246, 30);
+            this.UpdateLastName.Size = new System.Drawing.Size(246, 48);
             this.UpdateLastName.TabIndex = 1;
             // 
             // UpdateFirstName
@@ -1286,7 +1286,7 @@
             this.UpdateFirstName.ForeColor = System.Drawing.Color.White;
             this.UpdateFirstName.Location = new System.Drawing.Point(31, 36);
             this.UpdateFirstName.Name = "UpdateFirstName";
-            this.UpdateFirstName.Size = new System.Drawing.Size(246, 30);
+            this.UpdateFirstName.Size = new System.Drawing.Size(246, 48);
             this.UpdateFirstName.TabIndex = 0;
             // 
             // panel4
@@ -1335,10 +1335,10 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 34F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1535, 943);
+            this.ClientSize = new System.Drawing.Size(794, 464);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);

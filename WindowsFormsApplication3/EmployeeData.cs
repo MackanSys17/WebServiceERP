@@ -45,7 +45,6 @@ namespace QueryGenerator
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void LoadTableButton(object sender, EventArgs e)
@@ -116,13 +115,13 @@ namespace QueryGenerator
             string adress = AddAdress.Text;
             string lastname = AddLasName.Text;
             string worktitle = AddWorkTitle.Text;
-            service.addemployee(ssn, firstname, adress, lastname, worktitle);
+            service.AddEmployee(ssn, firstname, adress, lastname, worktitle);
         }
 
         private void FindUpdateButton(object sender, EventArgs e)
         {
             string upnr = FindSSN.Text;
-            dataGridView3.DataSource = service.findupdateemployee(upnr);
+            dataGridView3.DataSource = service.FindEmployee(upnr);
         }
 
         private void FindDeleteButton(object sender, EventArgs e)
@@ -138,7 +137,7 @@ namespace QueryGenerator
             string uadress = UpdateAdress.Text;
             string ulastname = UpdateLastName.Text;
             string uworktitle = UpdateWorkTitle.Text;
-            service.updateemployee(ssn, ufirstname, uadress, ulastname, uworktitle);
+            service.UpdateEmployee(ssn, ufirstname, uadress, ulastname, uworktitle);
         }
 
         private void DeleteDeleteButton(object sender, EventArgs e)
