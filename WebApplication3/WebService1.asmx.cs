@@ -31,9 +31,9 @@ namespace WebApplication3
                         sda.Fill(dt);
                         return dt;
                                 }
-            catch (SqlException e)
+            catch (SqlException)
             {
-                throw e;
+                throw;
             }
                             }
 
@@ -49,9 +49,9 @@ namespace WebApplication3
                         sda.Fill(dt1);
                         return dt1;
                     }
-                    catch (SqlException e)
+                    catch (SqlException)
                     {
-                        throw e;
+                        throw;
                     }
             }
         [WebMethod]
@@ -66,9 +66,9 @@ namespace WebApplication3
                 sda.Fill(dt2);
                 return dt2;
             }
-            catch (SqlException e)
+            catch (SqlException)
             {
-                throw e;
+                throw;
             }
         }
 
@@ -84,9 +84,9 @@ namespace WebApplication3
                 sda.Fill(dt3);
                 return dt3;
             }
-            catch (SqlException e)
+            catch (SqlException)
             {
-                throw e;
+                throw;
             }
         }
         [WebMethod]
@@ -101,9 +101,9 @@ namespace WebApplication3
                 sda.Fill(dt4);
                 return dt4;
             }
-            catch (SqlException e)
+            catch (SqlException)
             {
-                throw e;
+                throw;
             }
         }
 
@@ -119,9 +119,9 @@ namespace WebApplication3
                 sda.Fill(dt5);
                 return dt5;
             }
-            catch (SqlException e)
+            catch (SqlException)
             {
-                throw e;
+                throw;
             }
         }
         [WebMethod]
@@ -136,9 +136,9 @@ namespace WebApplication3
                 sda.Fill(dt6);
                 return dt6;
             }
-            catch (SqlException e)
+            catch (SqlException)
             {
-                throw e;
+                throw;
             }
         }
         [WebMethod]
@@ -153,9 +153,9 @@ namespace WebApplication3
                 sda.Fill(dt7);
                 return dt7;
             }
-            catch (SqlException e)
+            catch (SqlException)
             {
-                throw e;
+                throw;
             }
         }
         [WebMethod]
@@ -170,49 +170,43 @@ namespace WebApplication3
                 sda.Fill(dt8);
                 return dt8;
             }
-            catch (SqlException e)
+            catch (SqlException)
             {
-                throw e;
+                throw;
             }
         }
         [WebMethod]
         public DataTable findupdateemployee()
         {
             string upnr = data.FindSSN.Text;
-            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT first_name, last_name, job_title, adress FROM [CRONUS Sverige AB$Employee] WHERE No_ = " + upnr))
-                {
-                    using (SqlDataAdapter sda = new SqlDataAdapter())
-                    {
-                        cmd.Connection = con;
-                        sda.SelectCommand = cmd;
-                        using (DataTable dt = new DataTable())
-                        {
-                            dt.TableName = "Employee";
-                            sda.Fill(dt);
-                            return dt;
-                        }
-                    }
-                }
+                SqlCommand cmd = new SqlCommand("SELECT first_name, last_name, job_title, adress FROM [CRONUS Sverige AB$Employee] WHERE No_ = " + upnr, con);
+                DataTable dt9 = new DataTable();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                dt9.TableName = "Employee";
+                sda.Fill(dt9);
+                return dt9;
+            }
+            catch (SqlException)
+            {
+                throw;
             }
         }
+
+
+
         [WebMethod]
         public void DeleteEmploye()
         {
             string delnr = data.FindSSN2.Text;
-            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand("DELETE * FROM[CRONUS Sverige AB$Employee] where No_ =" + delnr))
-                {
-                    using (SqlDataAdapter sda = new SqlDataAdapter())
-                    {
-                        cmd.Connection = con;
-                        sda.SelectCommand = cmd;
-                    }
-                }
+                SqlCommand cmd = new SqlCommand("DELETE * FROM[CRONUS Sverige AB$Employee] where No_ =" + delnr, con);
+            }
+            catch (SqlException)
+            {
+                throw;
             }
         }
 
@@ -224,21 +218,17 @@ namespace WebApplication3
             string adress = data.AddAdress.Text;
             string lastname = data.AddLasName.Text;
             string worktitle = data.AddWorkTitle.Text;
-            string constr = ConfigurationManager.ConnectionStrings["Data Source=GEDDA;Initial Catalog=Cronus;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand("INSERT INTO [CRONUS Sverige AB$Employee](No_, First_name, last_name, adress, work_title) VALUES (" + sosnr +"," + name + "," + lastname + "," +adress + "," + worktitle +")" ))
-                {
-                    using (SqlDataAdapter sda = new SqlDataAdapter())
-                    {
-                        cmd.Connection = con;
-                        sda.SelectCommand = cmd;
-                    }
-                }
+                SqlCommand cmd = new SqlCommand("INSERT INTO [CRONUS Sverige AB$Employee](No_, First_name, last_name, adress, work_title) VALUES (" + sosnr + "," + name + "," + lastname + "," + adress + "," + worktitle + ")", con);
+            }
+            catch (SqlException)
+            {
+                throw;
             }
         }
 
-        [WebMethod]
+    [WebMethod]
         public void updateemployee()
         {
             string sosnr = data.FindSSN.Text;
@@ -246,45 +236,29 @@ namespace WebApplication3
             string adress = data.UpdateAdress.Text;
             string lastname = data.UpdateLastName.Text;
             string worktitle = data.UpdateWorkTitle.Text;
-            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand("UPDATE [CRONUS Sverige AB$Employee] SET first_name = " + name + ", last_name =" + lastname +", adress =" + adress + ", work_title = " + worktitle +"WHERE No_ =" + sosnr))
-                {
-                    using (SqlDataAdapter sda = new SqlDataAdapter())
-                    {
-                        cmd.Connection = con;
-                        sda.SelectCommand = cmd;
-                    }
-                }
+                SqlCommand cmd = new SqlCommand("UPDATE [CRONUS Sverige AB$Employee] SET first_name = " + name + ", last_name =" + lastname + ", adress =" + adress + ", work_title = " + worktitle + "WHERE No_ =" + sosnr, con);
+            }
+            catch (SqlException)
+            {
+                throw;
             }
         }
+
 
         [WebMethod]
         public DataTable FindEmployee()
         {
             string sosnr = data.FindSSN2.Text;
-            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM[CRONUS Sverige AB$Employee] where No_ =" + sosnr))
-                {
-                    using (SqlDataAdapter sda = new SqlDataAdapter())
-                    {
-                        cmd.Connection = con;
-                        sda.SelectCommand = cmd;
-                        using (DataTable dt = new DataTable())
-
-                        {
-
-                            dt.TableName = "Employee";
-                            sda.Fill(dt);
-                            return dt;
-
-                        }
-                    }
-                }
+                SqlCommand cmd = new SqlCommand("SELECT * FROM[CRONUS Sverige AB$Employee] where No_ =" + sosnr, con);
+            }
+            catch (SqlException)
+            {
+                throw;
             }
         }
     }
-}
+        }

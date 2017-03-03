@@ -50,43 +50,6 @@ namespace QueryGenerator
 
         private void LoadTableButton(object sender, EventArgs e)
         {
-            if (bunifuDropdown1.Items.Contains("1 MetaData for employees and relative tables"))
-            {
-                dataGridView1.DataSource = service.Get();
-            }
-            else if (bunifuDropdown1.Items.Contains("2"))
-            {
-                dataGridView1.DataSource = service.Get1();
-               
-            }
-            else if (bunifuDropdown1.Items.Contains("3 Employees with most sickdays 2004"))
-            {
-                dataGridView1.DataSource = service.Get2();
-            }
-            else if (bunifuDropdown1.Items.Contains("4 Employee with most sickdays"))
-                {
-                dataGridView1.DataSource = service.Get3();
-                }
-            else if (bunifuDropdown1.Items.Contains("5 All Keys"))
-            {
-                dataGridView1.DataSource = service.Get4();
-            }
-            else if (bunifuDropdown1.Items.Contains("6 All indexes"))
-            {
-                dataGridView1.DataSource = service.Get5();
-            }
-            else if (bunifuDropdown1.Items.Contains("7 All table constraints"))
-            {
-                dataGridView1.DataSource = service.Get6();
-            }
-            else if (bunifuDropdown1.Items.Contains("8 All tables"))
-            {
-                dataGridView1.DataSource = service.Get7();
-            }
-            else if (bunifuDropdown1.Items.Contains("9 All columns from Employee"))
-            {
-                dataGridView1.DataSource = service.Get8();
-            }
         }
 
         private void MinimizeButton1(object sender, EventArgs e)
@@ -232,6 +195,56 @@ namespace QueryGenerator
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = service.Get1();
+        }
+
+        private void bunifuTextbox1_OnTextChange(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = service.Get();
+        }
+
+        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = service.Get1();
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = service.Get2();
+        }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = service.Get3();
+        }
+
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = service.Get4();
+        }
+
+        private void bunifuFlatButton6_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = service.Get5();
+        }
+
+        private void bunifuFlatButton7_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = service.Get6();
+        }
+
+        private void bunifuFlatButton8_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = service.Get7();
+        }
+
+        private void bunifuFlatButton9_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = service.Get8();
         }
     }
 }
