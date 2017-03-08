@@ -16,7 +16,7 @@ namespace WebApplication3
     public class WebService1 : System.Web.Services.WebService
     {
         QueryGenerator.Form1 data = new QueryGenerator.Form1();
-        private SqlConnection con = new SqlConnection(@"Data Source=GEDDA;Initial Catalog=Cronus;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        private SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-5C3JSVR;Initial Catalog=Demo Database NAV (5-0);Integrated Security=True;");
 
 
 
@@ -28,8 +28,9 @@ namespace WebApplication3
                 DataTable dt = new DataTable();
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                         dt.TableName = "Uppgift 1";
-                        sda.Fill(dt);
-                        return dt;
+
+                sda.Fill(dt);
+                             return dt;
                                 }
             catch (SqlException)
             {
@@ -46,7 +47,8 @@ namespace WebApplication3
                         DataTable dt1 = new DataTable();
                         SqlDataAdapter sda = new SqlDataAdapter(cmd);
                         dt1.TableName = "Uppgift 2";
-                        sda.Fill(dt1);
+                dt1.ToString();
+                sda.Fill(dt1);
                         return dt1;
                     }
                     catch (SqlException)
@@ -94,7 +96,7 @@ namespace WebApplication3
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("SELECT OBJECT_NAME (OBJECT_ID) AS NameofConstraint, SCHEMA_NAME (schema_id) AS SchemaName,OBJECT_NAME (parent_object_id) AS TableName,type_desc AS ConstraintType FROM sys.objects WHERE type_desc IN ('FOREIGN_KEY_CONSTRAINT', 'PRIMARY_KEY_CONSTRAINT')GO", con);
+                SqlCommand cmd = new SqlCommand("SELECT OBJECT_NAME (OBJECT_ID) AS NameofConstraint, SCHEMA_NAME (schema_id) AS SchemaName,OBJECT_NAME (parent_object_id) AS TableName,type_desc AS ConstraintType FROM sys.objects WHERE type_desc IN ('FOREIGN_KEY_CONSTRAINT', 'PRIMARY_KEY_CONSTRAINT')", con);
                 DataTable dt4 = new DataTable();
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 dt4.TableName = "Uppgift 5";
@@ -180,7 +182,7 @@ namespace WebApplication3
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("SELECT first_name, last_name, job_title, adress FROM [CRONUS Sverige AB$Employee] WHERE No_ = " + upnr, con);
+                SqlCommand cmd = new SqlCommand("SELECT first_name, last_name, job_title, adress FROM [CRONUS Sverige AB$Employee] WHERE No_ LIKE '%" + upnr + "%'", con);
                 DataTable dt9 = new DataTable();
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 dt9.TableName = "Employee";
@@ -200,7 +202,7 @@ namespace WebApplication3
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("DELETE * FROM[CRONUS Sverige AB$Employee] where No_ =" + delnr, con);
+                SqlCommand cmd = new SqlCommand("DELETE * FROM[CRONUS Sverige AB$Employee] where No_ LIKE '%" + delnr +"%'", con);
             }
             catch (SqlException)
             {
@@ -226,7 +228,7 @@ namespace WebApplication3
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("UPDATE [CRONUS Sverige AB$Employee] SET first_name = " + name + ", last_name =" + lastname + ", adress =" + adress + ", work_title = " + worktitle + "WHERE No_ =" + sosnr, con);
+                SqlCommand cmd = new SqlCommand("UPDATE [CRONUS Sverige AB$Employee] SET first_name = " + name + ", last_name =" + lastname + ", adress =" + adress + ", work_title = " + worktitle + "WHERE No_ LIKE '%" + sosnr +"%'", con);
             }
             catch (SqlException)
             {
@@ -240,7 +242,7 @@ namespace WebApplication3
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM[CRONUS Sverige AB$Employee] where No_ =" + sosnr, con);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM [CRONUS Sverige AB$Employee] where No_ LIKE'%" + sosnr +"%'", con);
                 DataTable dt12 = new DataTable();
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 dt12.TableName = "Delete search";
