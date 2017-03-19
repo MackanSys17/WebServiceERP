@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -68,6 +70,49 @@ namespace WebApplication3
                 dt2.TableName = "Uppgift 3";
                 sda.Fill(dt2);
                 return dt2;
+            }
+            catch (SqlException)
+            {
+                throw;
+            }
+        }
+        public List<string> get2java()
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM[CRONUS Sverige AB$Employee Absence], [CRONUS Sverige AB$Employee] where[Employee No_] = No_ and[From Date] like '%2004%'", con);
+                SqlDataReader dr = cmd.ExecuteReader();
+                List<string> str = new List<string>();
+                while (dr.Read())
+                {
+                    str.Add(dr.GetValue(0).ToString());
+                }
+                dr.Close();
+                return str;
+
+            }
+            catch (SqlException)
+            {
+                throw;
+            }
+                    }
+        public List<DataRow> get3java()
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM[CRONUS Sverige AB$Employee Absence], [CRONUS Sverige AB$Employee] where[Employee No_] = No_ and[From Date] like '%2004%'", con);
+                SqlDataReader dr = cmd.ExecuteReader();
+                DataTable dt2 = new DataTable();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                dt2.TableName = "Uppgift 3";
+                sda.Fill(dt2);
+                List<DataRow> list1 = new List<DataRow>();
+                foreach (DataRow tt in dt2.Rows)
+                {
+                    list1.Add(tt);
+                }
+                return list1;
+
             }
             catch (SqlException)
             {
