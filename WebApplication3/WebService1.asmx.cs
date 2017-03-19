@@ -96,29 +96,6 @@ namespace WebApplication3
                 throw;
             }
                     }
-        public List<DataRow> get3java()
-        {
-            try
-            {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM[CRONUS Sverige AB$Employee Absence], [CRONUS Sverige AB$Employee] where[Employee No_] = No_ and[From Date] like '%2004%'", con);
-                SqlDataReader dr = cmd.ExecuteReader();
-                DataTable dt2 = new DataTable();
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                dt2.TableName = "Uppgift 3";
-                sda.Fill(dt2);
-                List<DataRow> list1 = new List<DataRow>();
-                foreach (DataRow tt in dt2.Rows)
-                {
-                    list1.Add(tt);
-                }
-                return list1;
-
-            }
-            catch (SqlException)
-            {
-                throw;
-            }
-        }
 
         [WebMethod]
         public ArrayList java()
@@ -290,6 +267,35 @@ namespace WebApplication3
                 throw;
             }
         }
+        [WebMethod]
+        public ArrayList javaget1()
+        {
+            ArrayList arrayList = new ArrayList(javaset1());
+            return arrayList;
+        }
+        public List<DataRow> javaset1()
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM[CRONUS Sverige AB$Employee Absence], [CRONUS Sverige AB$Employee] where[Employee No_] = No_ and[From Date] like '%2004%'", con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            DataTable dt2 = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            dt2.TableName = "Uppgift 3";
+                sda.Fill(dt2);
+                List<DataRow> list1 = new List<DataRow>();
+                foreach (DataRow tt in dt2.Rows)
+                {
+                    list1.Add(tt);
+                }
+                return list1;
+
+    }
+            catch (SqlException)
+            {
+                throw;
+            }
+        }
 
 
         [WebMethod]
@@ -311,4 +317,4 @@ namespace WebApplication3
             }
         }
     }
-        }
+}
