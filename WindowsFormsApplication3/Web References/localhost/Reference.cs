@@ -28,6 +28,7 @@ namespace WindowsFormsApplication3.localhost {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="WebService1Soap", Namespace="http://tempuri.org/")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(object[]))]
     public partial class WebService1 : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
         private System.Threading.SendOrPostCallback GetOperationCompleted;
@@ -35,6 +36,8 @@ namespace WindowsFormsApplication3.localhost {
         private System.Threading.SendOrPostCallback Get1OperationCompleted;
         
         private System.Threading.SendOrPostCallback Get2OperationCompleted;
+        
+        private System.Threading.SendOrPostCallback javaOperationCompleted;
         
         private System.Threading.SendOrPostCallback Get3OperationCompleted;
         
@@ -104,6 +107,9 @@ namespace WindowsFormsApplication3.localhost {
         
         /// <remarks/>
         public event Get2CompletedEventHandler Get2Completed;
+        
+        /// <remarks/>
+        public event javaCompletedEventHandler javaCompleted;
         
         /// <remarks/>
         public event Get3CompletedEventHandler Get3Completed;
@@ -216,6 +222,33 @@ namespace WindowsFormsApplication3.localhost {
             if ((this.Get2Completed != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.Get2Completed(this, new Get2CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/java", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public object[] java() {
+            object[] results = this.Invoke("java", new object[0]);
+            return ((object[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void javaAsync() {
+            this.javaAsync(null);
+        }
+        
+        /// <remarks/>
+        public void javaAsync(object userState) {
+            if ((this.javaOperationCompleted == null)) {
+                this.javaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnjavaOperationCompleted);
+            }
+            this.InvokeAsync("java", new object[0], this.javaOperationCompleted, userState);
+        }
+        
+        private void OnjavaOperationCompleted(object arg) {
+            if ((this.javaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.javaCompleted(this, new javaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -632,6 +665,32 @@ namespace WindowsFormsApplication3.localhost {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((System.Data.DataTable)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void javaCompletedEventHandler(object sender, javaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class javaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal javaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public object[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((object[])(this.results[0]));
             }
         }
     }

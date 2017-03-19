@@ -221,7 +221,7 @@ namespace QueryGenerator
 
         private void TaskButton2(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = service.Get1();
+            dataGridView1.DataSource = service.java();
         }
 
         private void TaskButton3(object sender, EventArgs e)

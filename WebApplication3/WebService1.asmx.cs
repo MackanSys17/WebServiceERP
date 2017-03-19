@@ -1,6 +1,8 @@
-﻿using System.Configuration;
+﻿using System.Collections;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Web.Services;
 
 namespace WebApplication3
@@ -47,7 +49,6 @@ namespace WebApplication3
                         DataTable dt1 = new DataTable();
                         SqlDataAdapter sda = new SqlDataAdapter(cmd);
                         dt1.TableName = "Uppgift 2";
-                dt1.ToString();
                 sda.Fill(dt1);
                         return dt1;
                     }
@@ -72,6 +73,15 @@ namespace WebApplication3
             {
                 throw;
             }
+        }
+
+        [WebMethod]
+        public ArrayList java()
+        {
+            ArrayList rows = new ArrayList();
+            foreach (DataRow dataRow in Get1().Rows)
+                rows.Add(string.Join(";", dataRow.ItemArray.Select(item => item.ToString())));
+            return rows;
         }
 
         [WebMethod]

@@ -53,6 +53,21 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="java">
+        <s:complexType />
+      </s:element>
+      <s:element name="javaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="javaResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
       <s:element name="Get3">
         <s:complexType />
       </s:element>
@@ -255,6 +270,12 @@
   <wsdl:message name="Get2SoapOut">
     <wsdl:part name="parameters" element="tns:Get2Response" />
   </wsdl:message>
+  <wsdl:message name="javaSoapIn">
+    <wsdl:part name="parameters" element="tns:java" />
+  </wsdl:message>
+  <wsdl:message name="javaSoapOut">
+    <wsdl:part name="parameters" element="tns:javaResponse" />
+  </wsdl:message>
   <wsdl:message name="Get3SoapIn">
     <wsdl:part name="parameters" element="tns:Get3" />
   </wsdl:message>
@@ -334,6 +355,10 @@
       <wsdl:input message="tns:Get2SoapIn" />
       <wsdl:output message="tns:Get2SoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="java">
+      <wsdl:input message="tns:javaSoapIn" />
+      <wsdl:output message="tns:javaSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="Get3">
       <wsdl:input message="tns:Get3SoapIn" />
       <wsdl:output message="tns:Get3SoapOut" />
@@ -401,6 +426,15 @@
     </wsdl:operation>
     <wsdl:operation name="Get2">
       <soap:operation soapAction="http://tempuri.org/Get2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="java">
+      <soap:operation soapAction="http://tempuri.org/java" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -530,6 +564,15 @@
     </wsdl:operation>
     <wsdl:operation name="Get2">
       <soap12:operation soapAction="http://tempuri.org/Get2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="java">
+      <soap12:operation soapAction="http://tempuri.org/java" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
