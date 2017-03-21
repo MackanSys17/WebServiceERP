@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web.Services;
+using System.Xml.Linq;
 
 namespace WebApplication3
 {
@@ -20,7 +21,7 @@ namespace WebApplication3
     public class WebService1 : System.Web.Services.WebService
     {
         QueryGenerator.Form1 data = new QueryGenerator.Form1();
-        private SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-5C3JSVR;Initial Catalog=Demo Database NAV (5-0);Integrated Security=True;");
+        private SqlConnection con = new SqlConnection(@"Data Source = GEDDA; Initial Catalog = Cronus; Integrated Security = True;");
 
 
 
@@ -267,36 +268,85 @@ namespace WebApplication3
                 throw;
             }
         }
-        [WebMethod]
-        public ArrayList javaget1()
-        {
-            ArrayList arrayList = new ArrayList(javaset1());
-            return arrayList;
-        }
-        public List<DataRow> javaset1()
+
+        public List<object> Convert(object[,] o)
         {
             try
             {
                 SqlCommand cmd = new SqlCommand("SELECT * FROM[CRONUS Sverige AB$Employee Absence], [CRONUS Sverige AB$Employee] where[Employee No_] = No_ and[From Date] like '%2004%'", con);
-            SqlDataReader dr = cmd.ExecuteReader();
-            DataTable dt2 = new DataTable();
-            SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            dt2.TableName = "Uppgift 3";
+                DataTable dt2 = new DataTable();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                dt2.TableName = "Uppgift 3";
                 sda.Fill(dt2);
-                List<DataRow> list1 = new List<DataRow>();
-                foreach (DataRow tt in dt2.Rows)
-                {
-                    list1.Add(tt);
-                }
-                return list1;
+                var dts = dt2;
+                var rows = dt2.Rows;
+            int rowCount = rows.Count;
+            int colCount = dt2.Columns.Count;
+            var result = new object[rowCount, colCount];
 
-    }
+            for (int i = 0; i < rowCount; i++)
+            {
+                var row = rows[i];
+                for (int j = 0; j < colCount; j++)
+                {
+                    result[i, j] = row[j];
+                }
+            }
+                List<object> test = new List<object>();
+                test = ((IEnumerable)result).Cast<object>().ToList();
+                return test;
+            }
+         catch (SqlException)
+            {
+                throw;
+            }
+      }
+        [WebMethod]
+        public ArrayList objects()
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM sys.objects WHERE schema_id = SCHEMA_ID('dbo')", con);
+                DataTable list = new DataTable();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                list.TableName = "All objects";
+                sda.Fill(list);
+                ArrayList rows = new ArrayList();
+                foreach (DataRow dataRow in list.Rows)
+                    { 
+                        rows.Add(dataRow);
+                    }
+                return rows;
+            }
             catch (SqlException)
             {
                 throw;
             }
         }
 
+
+
+        [WebMethod]
+        public ArrayList dsToArray()
+        {
+            ArrayList array = new ArrayList();
+            DataTable dt = Get();
+
+            ArrayList listColumns = new ArrayList();
+            foreach (DataColumn column in dt.Columns)
+                listColumns.Add(column.ColumnName);
+            array.Add(listColumns);
+
+            foreach (DataRow r in dt.Rows)
+            {
+                ArrayList row = new ArrayList();
+                foreach (object value in r.ItemArray)
+                    row.Add(value);
+
+                array.Add(row);
+            }
+            return array;
+        }
 
         [WebMethod]
         public DataTable FindEmployee(string sosnr)
@@ -316,5 +366,9 @@ namespace WebApplication3
                 throw;
             }
         }
+    }
+
+    public class T
+    {
     }
 }

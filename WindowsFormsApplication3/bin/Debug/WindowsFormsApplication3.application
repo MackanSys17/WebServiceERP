@@ -8,7 +8,7 @@
         <beforeApplicationStartup />
       </update>
     </subscription>
-    <deploymentProvider codebase="http://desktop-5c3jsvr:65311/WindowsFormsApplication3.application" />
+    <deploymentProvider codebase="http://gedda:65311/WindowsFormsApplication3.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
@@ -21,7 +21,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>MmdfiRbgU+nKfp897FGcHmsV9OFPPiVd+6AkmUoN2vk=</dsig:DigestValue>
+        <dsig:DigestValue>+h/Umnd9gR61PdnyMHI/aGb6d/qJLAl9nvNLcLM6tZ0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

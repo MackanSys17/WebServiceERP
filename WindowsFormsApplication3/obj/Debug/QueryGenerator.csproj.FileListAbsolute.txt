@@ -10,19 +10,6 @@ C:\Users\Marcus\Documents\Visual Studio 2015\Projects\WebServiceERP\WindowsForms
 C:\Users\Marcus\Documents\Visual Studio 2015\Projects\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.application
 C:\Users\Marcus\Documents\Visual Studio 2015\Projects\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
 C:\Users\Marcus\Documents\Visual Studio 2015\Projects\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
-C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
-C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.manifest
-C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.application
-C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe
-C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\obj\Debug\QueryGenerator.Form1.resources
-C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Properties.Resources.resources
-C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\obj\Debug\QueryGenerator.csproj.GenerateResource.Cache
-C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe.manifest
-C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.application
-C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
-C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
-C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.pdb
-C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\obj\Debug\QueryGenerator.csprojResolveAssemblyReference.cache
 C:\Users\Joel\Documents\WebServiceERP\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
 C:\Users\Joel\Documents\WebServiceERP\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.manifest
 C:\Users\Joel\Documents\WebServiceERP\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.application
@@ -36,3 +23,15 @@ C:\Users\Joel\Documents\WebServiceERP\WindowsFormsApplication3\obj\Debug\Windows
 C:\Users\Joel\Documents\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.application
 C:\Users\Joel\Documents\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
 C:\Users\Joel\Documents\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
+C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
+C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.manifest
+C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.application
+C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe
+C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.pdb
+C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\obj\Debug\QueryGenerator.Form1.resources
+C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Properties.Resources.resources
+C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\obj\Debug\QueryGenerator.csproj.GenerateResource.Cache
+C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe.manifest
+C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.application
+C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
+C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb

@@ -59,6 +59,10 @@ namespace WindowsFormsApplication3.localhost {
         
         private System.Threading.SendOrPostCallback UpdateEmployeeOperationCompleted;
         
+        private System.Threading.SendOrPostCallback objectsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback dsToArrayOperationCompleted;
+        
         private System.Threading.SendOrPostCallback FindEmployeeOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
@@ -140,6 +144,12 @@ namespace WindowsFormsApplication3.localhost {
         
         /// <remarks/>
         public event UpdateEmployeeCompletedEventHandler UpdateEmployeeCompleted;
+        
+        /// <remarks/>
+        public event objectsCompletedEventHandler objectsCompleted;
+        
+        /// <remarks/>
+        public event dsToArrayCompletedEventHandler dsToArrayCompleted;
         
         /// <remarks/>
         public event FindEmployeeCompletedEventHandler FindEmployeeCompleted;
@@ -544,6 +554,60 @@ namespace WindowsFormsApplication3.localhost {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/objects", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public object[] objects() {
+            object[] results = this.Invoke("objects", new object[0]);
+            return ((object[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void objectsAsync() {
+            this.objectsAsync(null);
+        }
+        
+        /// <remarks/>
+        public void objectsAsync(object userState) {
+            if ((this.objectsOperationCompleted == null)) {
+                this.objectsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnobjectsOperationCompleted);
+            }
+            this.InvokeAsync("objects", new object[0], this.objectsOperationCompleted, userState);
+        }
+        
+        private void OnobjectsOperationCompleted(object arg) {
+            if ((this.objectsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.objectsCompleted(this, new objectsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/dsToArray", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public object[] dsToArray() {
+            object[] results = this.Invoke("dsToArray", new object[0]);
+            return ((object[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void dsToArrayAsync() {
+            this.dsToArrayAsync(null);
+        }
+        
+        /// <remarks/>
+        public void dsToArrayAsync(object userState) {
+            if ((this.dsToArrayOperationCompleted == null)) {
+                this.dsToArrayOperationCompleted = new System.Threading.SendOrPostCallback(this.OndsToArrayOperationCompleted);
+            }
+            this.InvokeAsync("dsToArray", new object[0], this.dsToArrayOperationCompleted, userState);
+        }
+        
+        private void OndsToArrayOperationCompleted(object arg) {
+            if ((this.dsToArrayCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.dsToArrayCompleted(this, new dsToArrayCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/FindEmployee", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataTable FindEmployee(string sosnr) {
             object[] results = this.Invoke("FindEmployee", new object[] {
@@ -888,6 +952,58 @@ namespace WindowsFormsApplication3.localhost {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void UpdateEmployeeCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void objectsCompletedEventHandler(object sender, objectsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class objectsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal objectsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public object[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((object[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void dsToArrayCompletedEventHandler(object sender, dsToArrayCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class dsToArrayCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal dsToArrayCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public object[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((object[])(this.results[0]));
+            }
+        }
+    }
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]

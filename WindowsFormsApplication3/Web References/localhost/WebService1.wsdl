@@ -229,6 +229,26 @@
       <s:element name="UpdateEmployeeResponse">
         <s:complexType />
       </s:element>
+      <s:element name="objects">
+        <s:complexType />
+      </s:element>
+      <s:element name="objectsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objectsResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsToArray">
+        <s:complexType />
+      </s:element>
+      <s:element name="dsToArrayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsToArrayResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="FindEmployee">
         <s:complexType>
           <s:sequence>
@@ -336,6 +356,18 @@
   <wsdl:message name="UpdateEmployeeSoapOut">
     <wsdl:part name="parameters" element="tns:UpdateEmployeeResponse" />
   </wsdl:message>
+  <wsdl:message name="objectsSoapIn">
+    <wsdl:part name="parameters" element="tns:objects" />
+  </wsdl:message>
+  <wsdl:message name="objectsSoapOut">
+    <wsdl:part name="parameters" element="tns:objectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsToArraySoapIn">
+    <wsdl:part name="parameters" element="tns:dsToArray" />
+  </wsdl:message>
+  <wsdl:message name="dsToArraySoapOut">
+    <wsdl:part name="parameters" element="tns:dsToArrayResponse" />
+  </wsdl:message>
   <wsdl:message name="FindEmployeeSoapIn">
     <wsdl:part name="parameters" element="tns:FindEmployee" />
   </wsdl:message>
@@ -398,6 +430,14 @@
     <wsdl:operation name="UpdateEmployee">
       <wsdl:input message="tns:UpdateEmployeeSoapIn" />
       <wsdl:output message="tns:UpdateEmployeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="objects">
+      <wsdl:input message="tns:objectsSoapIn" />
+      <wsdl:output message="tns:objectsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsToArray">
+      <wsdl:input message="tns:dsToArraySoapIn" />
+      <wsdl:output message="tns:dsToArraySoapOut" />
     </wsdl:operation>
     <wsdl:operation name="FindEmployee">
       <wsdl:input message="tns:FindEmployeeSoapIn" />
@@ -525,6 +565,24 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateEmployee">
       <soap:operation soapAction="http://tempuri.org/UpdateEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="objects">
+      <soap:operation soapAction="http://tempuri.org/objects" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsToArray">
+      <soap:operation soapAction="http://tempuri.org/dsToArray" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -663,6 +721,24 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateEmployee">
       <soap12:operation soapAction="http://tempuri.org/UpdateEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="objects">
+      <soap12:operation soapAction="http://tempuri.org/objects" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsToArray">
+      <soap12:operation soapAction="http://tempuri.org/dsToArray" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
