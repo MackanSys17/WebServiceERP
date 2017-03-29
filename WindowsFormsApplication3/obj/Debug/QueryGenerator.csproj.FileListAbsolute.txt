@@ -35,3 +35,4 @@ C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\obj\Debug
 C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.application
 C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
 C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
+C:\Users\gedda\Documents\GitHub\WebServiceERP\WindowsFormsApplication3\obj\Debug\QueryGenerator.csprojResolveAssemblyReference.cache

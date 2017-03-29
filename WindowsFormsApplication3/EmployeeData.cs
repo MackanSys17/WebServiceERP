@@ -1,24 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using System.Configuration;
+using WindowsFormsApplication3.ServiceReference1;
 
 namespace QueryGenerator
 {
+
+
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
         }
-        WindowsFormsApplication3.localhost.WebService1 service = new WindowsFormsApplication3.localhost.WebService1();
+
+        WebService2SoapClient service = new WebService2SoapClient();
 
         protected override void WndProc(ref Message m)
         {
@@ -33,9 +30,6 @@ namespace QueryGenerator
             base.WndProc(ref m);
         }
 
-        private void DropDownMenu(object sender, EventArgs e)
-        {
-        }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -46,7 +40,7 @@ namespace QueryGenerator
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
-
+        
         private void LoadTableButton(object sender, EventArgs e)
         {
         }
@@ -58,7 +52,6 @@ namespace QueryGenerator
 
         private void ExitButton1(object sender, EventArgs e)
         {
-            Environment.Exit(1);
             Close();
         }
 
@@ -110,6 +103,7 @@ namespace QueryGenerator
 
         private void AddEmployeeButton(object sender, EventArgs e)
         {
+            
             string ssn = AddSSN.Text;
             string firstname = AddFirstName.Text;
             string adress = AddAdress.Text;

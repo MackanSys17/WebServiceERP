@@ -22,15 +22,5 @@ namespace WindowsFormsApplication3.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:65311/WebService1.asmx")]
-        public string WindowsFormsApplication3_localhost_WebService1 {
-            get {
-                return ((string)(this["WindowsFormsApplication3_localhost_WebService1"]));
-            }
-        }
     }
 }
