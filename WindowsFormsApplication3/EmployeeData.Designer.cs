@@ -50,10 +50,10 @@
             this.Add = new ns1.BunifuFlatButton();
             this.Select = new ns1.BunifuFlatButton();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.DeleteDelete = new ns1.BunifuFlatButton();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.bunifuImageButton3 = new ns1.BunifuImageButton();
             this.bunifuImageButton4 = new ns1.BunifuImageButton();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.DeleteDelete = new ns1.BunifuFlatButton();
             this.FindDelete = new ns1.BunifuFlatButton();
             this.SSN3 = new ns1.BunifuCustomLabel();
             this.FindSSN2 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
@@ -71,6 +71,8 @@
             this.WorkTitle1 = new ns1.BunifuCustomLabel();
             this.AddFields = new ns1.BunifuFlatButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.bunifuImageButton1 = new ns1.BunifuImageButton();
             this.bunifuImageButton2 = new ns1.BunifuImageButton();
             this.UpdateEmployee = new ns1.BunifuCustomLabel();
@@ -78,34 +80,38 @@
             this.SSN2 = new ns1.BunifuCustomLabel();
             this.FindUpdate = new ns1.BunifuFlatButton();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.bunifuImageButton5 = new ns1.BunifuImageButton();
-            this.bunifuImageButton6 = new ns1.BunifuImageButton();
-            this.UpdateFirstName = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.UpdateLastName = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.UpdateAdress = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.UpdateWorkTitle = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.UpdateUpdate = new ns1.BunifuFlatButton();
-            this.FirstName2 = new ns1.BunifuCustomLabel();
-            this.LastName2 = new ns1.BunifuCustomLabel();
-            this.Adress2 = new ns1.BunifuCustomLabel();
-            this.WorkTitle2 = new ns1.BunifuCustomLabel();
+            this.label2 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.Adress2 = new ns1.BunifuCustomLabel();
+            this.bunifuImageButton5 = new ns1.BunifuImageButton();
+            this.WorkTitle2 = new ns1.BunifuCustomLabel();
+            this.LastName2 = new ns1.BunifuCustomLabel();
+            this.UpdateUpdate = new ns1.BunifuFlatButton();
+            this.UpdateAdress = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.bunifuImageButton6 = new ns1.BunifuImageButton();
+            this.UpdateWorkTitle = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.FirstName2 = new ns1.BunifuCustomLabel();
+            this.UpdateLastName = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.UpdateFirstName = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // ShowQuery
@@ -116,7 +122,7 @@
             this.ShowQuery.Location = new System.Drawing.Point(237, 39);
             this.ShowQuery.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ShowQuery.Name = "ShowQuery";
-            this.ShowQuery.Size = new System.Drawing.Size(144, 18);
+            this.ShowQuery.Size = new System.Drawing.Size(316, 40);
             this.ShowQuery.TabIndex = 0;
             this.ShowQuery.Text = "Choose table to show";
             // 
@@ -128,7 +134,7 @@
             this.SelectGenerator.ForeColor = System.Drawing.Color.White;
             this.SelectGenerator.Location = new System.Drawing.Point(183, 7);
             this.SelectGenerator.Name = "SelectGenerator";
-            this.SelectGenerator.Size = new System.Drawing.Size(198, 29);
+            this.SelectGenerator.Size = new System.Drawing.Size(446, 63);
             this.SelectGenerator.TabIndex = 3;
             this.SelectGenerator.Text = "Cronus Database";
             // 
@@ -169,11 +175,12 @@
             // 
             // bunifuFlatButton9
             // 
-            this.bunifuFlatButton9.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton9.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.bunifuFlatButton9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.bunifuFlatButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton9.BorderRadius = 0;
-            this.bunifuFlatButton9.ButtonText = "Uppgift 9";
+            this.bunifuFlatButton9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuFlatButton9.ButtonText = "Metadata";
             this.bunifuFlatButton9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton9.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton9.Iconcolor = System.Drawing.Color.Transparent;
@@ -189,15 +196,15 @@
             this.bunifuFlatButton9.IconZoom = 90D;
             this.bunifuFlatButton9.IsTab = false;
             this.bunifuFlatButton9.Location = new System.Drawing.Point(386, 149);
-            this.bunifuFlatButton9.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton9.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.bunifuFlatButton9.Name = "bunifuFlatButton9";
-            this.bunifuFlatButton9.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton9.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton9.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.bunifuFlatButton9.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.bunifuFlatButton9.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton9.selected = false;
             this.bunifuFlatButton9.Size = new System.Drawing.Size(164, 34);
             this.bunifuFlatButton9.TabIndex = 21;
-            this.bunifuFlatButton9.Text = "Uppgift 9";
+            this.bunifuFlatButton9.Text = "Metadata";
             this.bunifuFlatButton9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton9.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton9.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -205,11 +212,12 @@
             // 
             // bunifuFlatButton8
             // 
-            this.bunifuFlatButton8.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton8.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.bunifuFlatButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.bunifuFlatButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton8.BorderRadius = 0;
-            this.bunifuFlatButton8.ButtonText = "Uppgift 8";
+            this.bunifuFlatButton8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuFlatButton8.ButtonText = "All tables";
             this.bunifuFlatButton8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton8.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton8.Iconcolor = System.Drawing.Color.Transparent;
@@ -225,15 +233,15 @@
             this.bunifuFlatButton8.IconZoom = 90D;
             this.bunifuFlatButton8.IsTab = false;
             this.bunifuFlatButton8.Location = new System.Drawing.Point(387, 106);
-            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.bunifuFlatButton8.Name = "bunifuFlatButton8";
-            this.bunifuFlatButton8.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton8.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton8.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.bunifuFlatButton8.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.bunifuFlatButton8.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton8.selected = false;
             this.bunifuFlatButton8.Size = new System.Drawing.Size(163, 34);
             this.bunifuFlatButton8.TabIndex = 20;
-            this.bunifuFlatButton8.Text = "Uppgift 8";
+            this.bunifuFlatButton8.Text = "All tables";
             this.bunifuFlatButton8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton8.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton8.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -241,11 +249,12 @@
             // 
             // bunifuFlatButton7
             // 
-            this.bunifuFlatButton7.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton7.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.bunifuFlatButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.bunifuFlatButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton7.BorderRadius = 0;
-            this.bunifuFlatButton7.ButtonText = "Uppgift 7";
+            this.bunifuFlatButton7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuFlatButton7.ButtonText = "Constraints";
             this.bunifuFlatButton7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton7.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton7.Iconcolor = System.Drawing.Color.Transparent;
@@ -261,15 +270,15 @@
             this.bunifuFlatButton7.IconZoom = 90D;
             this.bunifuFlatButton7.IsTab = false;
             this.bunifuFlatButton7.Location = new System.Drawing.Point(387, 66);
-            this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.bunifuFlatButton7.Name = "bunifuFlatButton7";
-            this.bunifuFlatButton7.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton7.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton7.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.bunifuFlatButton7.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.bunifuFlatButton7.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton7.selected = false;
             this.bunifuFlatButton7.Size = new System.Drawing.Size(163, 32);
             this.bunifuFlatButton7.TabIndex = 19;
-            this.bunifuFlatButton7.Text = "Uppgift 7";
+            this.bunifuFlatButton7.Text = "Constraints";
             this.bunifuFlatButton7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton7.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton7.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -277,11 +286,12 @@
             // 
             // bunifuFlatButton6
             // 
-            this.bunifuFlatButton6.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton6.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.bunifuFlatButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.bunifuFlatButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton6.BorderRadius = 0;
-            this.bunifuFlatButton6.ButtonText = "Uppgift 6";
+            this.bunifuFlatButton6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuFlatButton6.ButtonText = "Index";
             this.bunifuFlatButton6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton6.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton6.Iconcolor = System.Drawing.Color.Transparent;
@@ -297,15 +307,15 @@
             this.bunifuFlatButton6.IconZoom = 90D;
             this.bunifuFlatButton6.IsTab = false;
             this.bunifuFlatButton6.Location = new System.Drawing.Point(215, 151);
-            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.bunifuFlatButton6.Name = "bunifuFlatButton6";
-            this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.bunifuFlatButton6.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton6.selected = false;
             this.bunifuFlatButton6.Size = new System.Drawing.Size(165, 32);
             this.bunifuFlatButton6.TabIndex = 18;
-            this.bunifuFlatButton6.Text = "Uppgift 6";
+            this.bunifuFlatButton6.Text = "Index";
             this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton6.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton6.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -313,11 +323,12 @@
             // 
             // bunifuFlatButton5
             // 
-            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.bunifuFlatButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton5.BorderRadius = 0;
-            this.bunifuFlatButton5.ButtonText = "Uppgift 5";
+            this.bunifuFlatButton5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuFlatButton5.ButtonText = "All keys";
             this.bunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent;
@@ -333,15 +344,15 @@
             this.bunifuFlatButton5.IconZoom = 90D;
             this.bunifuFlatButton5.IsTab = false;
             this.bunifuFlatButton5.Location = new System.Drawing.Point(215, 106);
-            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.bunifuFlatButton5.Name = "bunifuFlatButton5";
-            this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.bunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton5.selected = false;
-            this.bunifuFlatButton5.Size = new System.Drawing.Size(166, 32);
+            this.bunifuFlatButton5.Size = new System.Drawing.Size(167, 32);
             this.bunifuFlatButton5.TabIndex = 17;
-            this.bunifuFlatButton5.Text = "Uppgift 5";
+            this.bunifuFlatButton5.Text = "All keys";
             this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton5.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -349,11 +360,12 @@
             // 
             // bunifuFlatButton4
             // 
-            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.bunifuFlatButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton4.BorderRadius = 0;
-            this.bunifuFlatButton4.ButtonText = "Uppgift 2";
+            this.bunifuFlatButton4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuFlatButton4.ButtonText = "Relatives";
             this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent;
@@ -369,15 +381,15 @@
             this.bunifuFlatButton4.IconZoom = 90D;
             this.bunifuFlatButton4.IsTab = false;
             this.bunifuFlatButton4.Location = new System.Drawing.Point(39, 106);
-            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
-            this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton4.selected = false;
             this.bunifuFlatButton4.Size = new System.Drawing.Size(170, 32);
             this.bunifuFlatButton4.TabIndex = 16;
-            this.bunifuFlatButton4.Text = "Uppgift 2";
+            this.bunifuFlatButton4.Text = "Relatives";
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -385,11 +397,12 @@
             // 
             // bunifuFlatButton3
             // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.bunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "Uppgift 4";
+            this.bunifuFlatButton3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuFlatButton3.ButtonText = "Sickdays";
             this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
@@ -405,15 +418,15 @@
             this.bunifuFlatButton3.IconZoom = 90D;
             this.bunifuFlatButton3.IsTab = false;
             this.bunifuFlatButton3.Location = new System.Drawing.Point(215, 66);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(166, 30);
+            this.bunifuFlatButton3.Size = new System.Drawing.Size(167, 30);
             this.bunifuFlatButton3.TabIndex = 15;
-            this.bunifuFlatButton3.Text = "Uppgift 4";
+            this.bunifuFlatButton3.Text = "Sickdays";
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -421,11 +434,12 @@
             // 
             // bunifuFlatButton2
             // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "Uppgift 3";
+            this.bunifuFlatButton2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuFlatButton2.ButtonText = "Absence";
             this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
@@ -440,16 +454,16 @@
             this.bunifuFlatButton2.IconVisible = true;
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(39, 153);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(39, 152);
+            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton2.selected = false;
             this.bunifuFlatButton2.Size = new System.Drawing.Size(170, 30);
             this.bunifuFlatButton2.TabIndex = 14;
-            this.bunifuFlatButton2.Text = "Uppgift 3";
+            this.bunifuFlatButton2.Text = "Absence";
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -457,11 +471,12 @@
             // 
             // bunifuFlatButton1
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Uppgift 1";
+            this.bunifuFlatButton1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuFlatButton1.ButtonText = "All Columns";
             this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
@@ -477,15 +492,15 @@
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
             this.bunifuFlatButton1.Location = new System.Drawing.Point(39, 66);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton1.selected = false;
             this.bunifuFlatButton1.Size = new System.Drawing.Size(170, 27);
             this.bunifuFlatButton1.TabIndex = 13;
-            this.bunifuFlatButton1.Text = "Uppgift 1";
+            this.bunifuFlatButton1.Text = "All Columns";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -531,7 +546,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(90, 454);
+            this.panel2.Size = new System.Drawing.Size(90, 453);
             this.panel2.TabIndex = 13;
             // 
             // Delete
@@ -680,6 +695,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.DeleteDelete);
             this.panel5.Controls.Add(this.dataGridView2);
             this.panel5.Controls.Add(this.bunifuImageButton3);
@@ -692,47 +708,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(628, 449);
             this.panel5.TabIndex = 16;
-            // 
-            // bunifuImageButton3
-            // 
-            this.bunifuImageButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
-            this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(548, 19);
-            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Size = new System.Drawing.Size(29, 34);
-            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton3.TabIndex = 13;
-            this.bunifuImageButton3.TabStop = false;
-            this.bunifuImageButton3.Zoom = 10;
-            this.bunifuImageButton3.Click += new System.EventHandler(this.MinimizeButton3);
-            // 
-            // bunifuImageButton4
-            // 
-            this.bunifuImageButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.bunifuImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.Image")));
-            this.bunifuImageButton4.ImageActive = null;
-            this.bunifuImageButton4.Location = new System.Drawing.Point(592, 19);
-            this.bunifuImageButton4.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuImageButton4.Name = "bunifuImageButton4";
-            this.bunifuImageButton4.Size = new System.Drawing.Size(29, 34);
-            this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton4.TabIndex = 14;
-            this.bunifuImageButton4.TabStop = false;
-            this.bunifuImageButton4.Zoom = 10;
-            this.bunifuImageButton4.Click += new System.EventHandler(this.ExitButton3);
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(29, 148);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(586, 242);
-            this.dataGridView2.TabIndex = 23;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeleteEmployeeDataGrid);
             // 
             // DeleteDelete
             // 
@@ -770,6 +745,47 @@
             this.DeleteDelete.Textcolor = System.Drawing.Color.White;
             this.DeleteDelete.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteDelete.Click += new System.EventHandler(this.DeleteDeleteButton);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(29, 148);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(586, 242);
+            this.dataGridView2.TabIndex = 23;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeleteEmployeeDataGrid);
+            // 
+            // bunifuImageButton3
+            // 
+            this.bunifuImageButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
+            this.bunifuImageButton3.ImageActive = null;
+            this.bunifuImageButton3.Location = new System.Drawing.Point(548, 19);
+            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuImageButton3.Name = "bunifuImageButton3";
+            this.bunifuImageButton3.Size = new System.Drawing.Size(29, 34);
+            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton3.TabIndex = 13;
+            this.bunifuImageButton3.TabStop = false;
+            this.bunifuImageButton3.Zoom = 10;
+            this.bunifuImageButton3.Click += new System.EventHandler(this.MinimizeButton3);
+            // 
+            // bunifuImageButton4
+            // 
+            this.bunifuImageButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.bunifuImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.Image")));
+            this.bunifuImageButton4.ImageActive = null;
+            this.bunifuImageButton4.Location = new System.Drawing.Point(592, 19);
+            this.bunifuImageButton4.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuImageButton4.Name = "bunifuImageButton4";
+            this.bunifuImageButton4.Size = new System.Drawing.Size(29, 34);
+            this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton4.TabIndex = 14;
+            this.bunifuImageButton4.TabStop = false;
+            this.bunifuImageButton4.Zoom = 10;
+            this.bunifuImageButton4.Click += new System.EventHandler(this.ExitButton3);
             // 
             // FindDelete
             // 
@@ -814,7 +830,7 @@
             this.SSN3.ForeColor = System.Drawing.Color.White;
             this.SSN3.Location = new System.Drawing.Point(204, 65);
             this.SSN3.Name = "SSN3";
-            this.SSN3.Size = new System.Drawing.Size(36, 18);
+            this.SSN3.Size = new System.Drawing.Size(81, 40);
             this.SSN3.TabIndex = 5;
             this.SSN3.Text = "No_";
             // 
@@ -826,7 +842,7 @@
             this.FindSSN2.ForeColor = System.Drawing.Color.White;
             this.FindSSN2.Location = new System.Drawing.Point(208, 90);
             this.FindSSN2.Name = "FindSSN2";
-            this.FindSSN2.Size = new System.Drawing.Size(181, 25);
+            this.FindSSN2.Size = new System.Drawing.Size(181, 48);
             this.FindSSN2.TabIndex = 4;
             this.FindSSN2.TextChanged += new System.EventHandler(this.No_Delete);
             // 
@@ -838,7 +854,7 @@
             this.DeleteEmployee.ForeColor = System.Drawing.Color.White;
             this.DeleteEmployee.Location = new System.Drawing.Point(201, 19);
             this.DeleteEmployee.Name = "DeleteEmployee";
-            this.DeleteEmployee.Size = new System.Drawing.Size(199, 29);
+            this.DeleteEmployee.Size = new System.Drawing.Size(439, 63);
             this.DeleteEmployee.TabIndex = 3;
             this.DeleteEmployee.Text = "Delete Employee";
             // 
@@ -850,7 +866,7 @@
             this.AddEmployee.ForeColor = System.Drawing.Color.White;
             this.AddEmployee.Location = new System.Drawing.Point(208, 22);
             this.AddEmployee.Name = "AddEmployee";
-            this.AddEmployee.Size = new System.Drawing.Size(171, 29);
+            this.AddEmployee.Size = new System.Drawing.Size(378, 63);
             this.AddEmployee.TabIndex = 3;
             this.AddEmployee.Text = "Add Employee";
             // 
@@ -862,8 +878,8 @@
             this.AddFirstName.ForeColor = System.Drawing.Color.White;
             this.AddFirstName.Location = new System.Drawing.Point(55, 163);
             this.AddFirstName.Name = "AddFirstName";
-            this.AddFirstName.Size = new System.Drawing.Size(229, 25);
-            this.AddFirstName.TabIndex = 4;
+            this.AddFirstName.Size = new System.Drawing.Size(229, 48);
+            this.AddFirstName.TabIndex = 2;
             // 
             // AddLasName
             // 
@@ -873,8 +889,8 @@
             this.AddLasName.ForeColor = System.Drawing.Color.White;
             this.AddLasName.Location = new System.Drawing.Point(55, 227);
             this.AddLasName.Name = "AddLasName";
-            this.AddLasName.Size = new System.Drawing.Size(229, 25);
-            this.AddLasName.TabIndex = 5;
+            this.AddLasName.Size = new System.Drawing.Size(229, 48);
+            this.AddLasName.TabIndex = 3;
             // 
             // AddSSN
             // 
@@ -884,8 +900,8 @@
             this.AddSSN.ForeColor = System.Drawing.Color.White;
             this.AddSSN.Location = new System.Drawing.Point(55, 98);
             this.AddSSN.Name = "AddSSN";
-            this.AddSSN.Size = new System.Drawing.Size(229, 25);
-            this.AddSSN.TabIndex = 6;
+            this.AddSSN.Size = new System.Drawing.Size(229, 48);
+            this.AddSSN.TabIndex = 1;
             // 
             // AddAdress
             // 
@@ -895,8 +911,8 @@
             this.AddAdress.ForeColor = System.Drawing.Color.White;
             this.AddAdress.Location = new System.Drawing.Point(320, 98);
             this.AddAdress.Name = "AddAdress";
-            this.AddAdress.Size = new System.Drawing.Size(229, 25);
-            this.AddAdress.TabIndex = 7;
+            this.AddAdress.Size = new System.Drawing.Size(229, 48);
+            this.AddAdress.TabIndex = 4;
             // 
             // AddWorkTitle
             // 
@@ -906,8 +922,8 @@
             this.AddWorkTitle.ForeColor = System.Drawing.Color.White;
             this.AddWorkTitle.Location = new System.Drawing.Point(320, 163);
             this.AddWorkTitle.Name = "AddWorkTitle";
-            this.AddWorkTitle.Size = new System.Drawing.Size(229, 25);
-            this.AddWorkTitle.TabIndex = 11;
+            this.AddWorkTitle.Size = new System.Drawing.Size(229, 48);
+            this.AddWorkTitle.TabIndex = 5;
             // 
             // FirstName1
             // 
@@ -916,7 +932,7 @@
             this.FirstName1.ForeColor = System.Drawing.Color.White;
             this.FirstName1.Location = new System.Drawing.Point(51, 138);
             this.FirstName1.Name = "FirstName1";
-            this.FirstName1.Size = new System.Drawing.Size(75, 18);
+            this.FirstName1.Size = new System.Drawing.Size(165, 40);
             this.FirstName1.TabIndex = 12;
             this.FirstName1.Text = "First name";
             // 
@@ -928,7 +944,7 @@
             this.LastName1.ForeColor = System.Drawing.Color.White;
             this.LastName1.Location = new System.Drawing.Point(55, 202);
             this.LastName1.Name = "LastName1";
-            this.LastName1.Size = new System.Drawing.Size(73, 18);
+            this.LastName1.Size = new System.Drawing.Size(161, 40);
             this.LastName1.TabIndex = 13;
             this.LastName1.Text = "Last name";
             // 
@@ -939,7 +955,7 @@
             this.SSN1.ForeColor = System.Drawing.Color.White;
             this.SSN1.Location = new System.Drawing.Point(55, 74);
             this.SSN1.Name = "SSN1";
-            this.SSN1.Size = new System.Drawing.Size(36, 18);
+            this.SSN1.Size = new System.Drawing.Size(81, 40);
             this.SSN1.TabIndex = 14;
             this.SSN1.Text = "No_";
             // 
@@ -950,7 +966,7 @@
             this.Adress1.ForeColor = System.Drawing.Color.White;
             this.Adress1.Location = new System.Drawing.Point(317, 73);
             this.Adress1.Name = "Adress1";
-            this.Adress1.Size = new System.Drawing.Size(51, 18);
+            this.Adress1.Size = new System.Drawing.Size(112, 40);
             this.Adress1.TabIndex = 15;
             this.Adress1.Text = "Adress";
             // 
@@ -961,7 +977,7 @@
             this.WorkTitle1.ForeColor = System.Drawing.Color.White;
             this.WorkTitle1.Location = new System.Drawing.Point(316, 138);
             this.WorkTitle1.Name = "WorkTitle1";
-            this.WorkTitle1.Size = new System.Drawing.Size(58, 18);
+            this.WorkTitle1.Size = new System.Drawing.Size(125, 40);
             this.WorkTitle1.TabIndex = 19;
             this.WorkTitle1.Text = "Job title";
             // 
@@ -988,7 +1004,7 @@
             this.AddFields.IconVisible = true;
             this.AddFields.IconZoom = 90D;
             this.AddFields.IsTab = false;
-            this.AddFields.Location = new System.Drawing.Point(272, 305);
+            this.AddFields.Location = new System.Drawing.Point(272, 283);
             this.AddFields.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AddFields.Name = "AddFields";
             this.AddFields.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
@@ -1005,6 +1021,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.dataGridView4);
             this.panel3.Controls.Add(this.bunifuImageButton1);
             this.panel3.Controls.Add(this.bunifuImageButton2);
             this.panel3.Controls.Add(this.AddFields);
@@ -1023,6 +1041,25 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(623, 449);
             this.panel3.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 286);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 34);
+            this.label1.TabIndex = 25;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(18, 314);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.Size = new System.Drawing.Size(580, 120);
+            this.dataGridView4.TabIndex = 24;
             // 
             // bunifuImageButton1
             // 
@@ -1062,7 +1099,7 @@
             this.UpdateEmployee.ForeColor = System.Drawing.Color.White;
             this.UpdateEmployee.Location = new System.Drawing.Point(166, 15);
             this.UpdateEmployee.Name = "UpdateEmployee";
-            this.UpdateEmployee.Size = new System.Drawing.Size(206, 29);
+            this.UpdateEmployee.Size = new System.Drawing.Size(456, 63);
             this.UpdateEmployee.TabIndex = 3;
             this.UpdateEmployee.Text = "Update Employee";
             // 
@@ -1074,7 +1111,7 @@
             this.FindSSN.ForeColor = System.Drawing.Color.White;
             this.FindSSN.Location = new System.Drawing.Point(173, 89);
             this.FindSSN.Name = "FindSSN";
-            this.FindSSN.Size = new System.Drawing.Size(187, 25);
+            this.FindSSN.Size = new System.Drawing.Size(187, 48);
             this.FindSSN.TabIndex = 4;
             this.FindSSN.TextChanged += new System.EventHandler(this.No_Update);
             // 
@@ -1085,7 +1122,7 @@
             this.SSN2.ForeColor = System.Drawing.Color.White;
             this.SSN2.Location = new System.Drawing.Point(169, 64);
             this.SSN2.Name = "SSN2";
-            this.SSN2.Size = new System.Drawing.Size(36, 18);
+            this.SSN2.Size = new System.Drawing.Size(81, 40);
             this.SSN2.TabIndex = 5;
             this.SSN2.Text = "No_";
             // 
@@ -1127,6 +1164,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.dataGridView3);
             this.panel4.Controls.Add(this.Adress2);
             this.panel4.Controls.Add(this.bunifuImageButton5);
@@ -1148,6 +1186,35 @@
             this.panel4.Size = new System.Drawing.Size(623, 449);
             this.panel4.TabIndex = 15;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(56, 393);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 34);
+            this.label2.TabIndex = 16;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(18, 282);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(580, 98);
+            this.dataGridView3.TabIndex = 15;
+            // 
+            // Adress2
+            // 
+            this.Adress2.AutoSize = true;
+            this.Adress2.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Adress2.ForeColor = System.Drawing.Color.White;
+            this.Adress2.Location = new System.Drawing.Point(364, 211);
+            this.Adress2.Name = "Adress2";
+            this.Adress2.Size = new System.Drawing.Size(112, 40);
+            this.Adress2.TabIndex = 10;
+            this.Adress2.Text = "Adress";
+            // 
             // bunifuImageButton5
             // 
             this.bunifuImageButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
@@ -1163,64 +1230,27 @@
             this.bunifuImageButton5.Zoom = 10;
             this.bunifuImageButton5.Click += new System.EventHandler(this.MinimizeButton4);
             // 
-            // bunifuImageButton6
+            // WorkTitle2
             // 
-            this.bunifuImageButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.bunifuImageButton6.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton6.Image")));
-            this.bunifuImageButton6.ImageActive = null;
-            this.bunifuImageButton6.Location = new System.Drawing.Point(594, 19);
-            this.bunifuImageButton6.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuImageButton6.Name = "bunifuImageButton6";
-            this.bunifuImageButton6.Size = new System.Drawing.Size(29, 34);
-            this.bunifuImageButton6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton6.TabIndex = 14;
-            this.bunifuImageButton6.TabStop = false;
-            this.bunifuImageButton6.Zoom = 10;
-            this.bunifuImageButton6.Click += new System.EventHandler(this.ExitButton4);
+            this.WorkTitle2.AutoSize = true;
+            this.WorkTitle2.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WorkTitle2.ForeColor = System.Drawing.Color.White;
+            this.WorkTitle2.Location = new System.Drawing.Point(389, 162);
+            this.WorkTitle2.Name = "WorkTitle2";
+            this.WorkTitle2.Size = new System.Drawing.Size(125, 40);
+            this.WorkTitle2.TabIndex = 14;
+            this.WorkTitle2.Text = "Job titel";
             // 
-            // UpdateFirstName
+            // LastName2
             // 
-            this.UpdateFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.UpdateFirstName.BorderColor = System.Drawing.Color.White;
-            this.UpdateFirstName.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateFirstName.ForeColor = System.Drawing.Color.White;
-            this.UpdateFirstName.Location = new System.Drawing.Point(29, 183);
-            this.UpdateFirstName.Name = "UpdateFirstName";
-            this.UpdateFirstName.Size = new System.Drawing.Size(246, 25);
-            this.UpdateFirstName.TabIndex = 0;
-            // 
-            // UpdateLastName
-            // 
-            this.UpdateLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.UpdateLastName.BorderColor = System.Drawing.Color.White;
-            this.UpdateLastName.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateLastName.ForeColor = System.Drawing.Color.White;
-            this.UpdateLastName.Location = new System.Drawing.Point(29, 232);
-            this.UpdateLastName.Name = "UpdateLastName";
-            this.UpdateLastName.Size = new System.Drawing.Size(246, 25);
-            this.UpdateLastName.TabIndex = 1;
-            // 
-            // UpdateAdress
-            // 
-            this.UpdateAdress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.UpdateAdress.BorderColor = System.Drawing.Color.White;
-            this.UpdateAdress.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateAdress.ForeColor = System.Drawing.Color.White;
-            this.UpdateAdress.Location = new System.Drawing.Point(352, 232);
-            this.UpdateAdress.Name = "UpdateAdress";
-            this.UpdateAdress.Size = new System.Drawing.Size(246, 25);
-            this.UpdateAdress.TabIndex = 2;
-            // 
-            // UpdateWorkTitle
-            // 
-            this.UpdateWorkTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.UpdateWorkTitle.BorderColor = System.Drawing.Color.White;
-            this.UpdateWorkTitle.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateWorkTitle.ForeColor = System.Drawing.Color.White;
-            this.UpdateWorkTitle.Location = new System.Drawing.Point(352, 183);
-            this.UpdateWorkTitle.Name = "UpdateWorkTitle";
-            this.UpdateWorkTitle.Size = new System.Drawing.Size(246, 25);
-            this.UpdateWorkTitle.TabIndex = 6;
+            this.LastName2.AutoSize = true;
+            this.LastName2.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastName2.ForeColor = System.Drawing.Color.White;
+            this.LastName2.Location = new System.Drawing.Point(53, 211);
+            this.LastName2.Name = "LastName2";
+            this.LastName2.Size = new System.Drawing.Size(161, 40);
+            this.LastName2.TabIndex = 9;
+            this.LastName2.Text = "Last name";
             // 
             // UpdateUpdate
             // 
@@ -1259,6 +1289,43 @@
             this.UpdateUpdate.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateUpdate.Click += new System.EventHandler(this.UpdateUpdateButton);
             // 
+            // UpdateAdress
+            // 
+            this.UpdateAdress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.UpdateAdress.BorderColor = System.Drawing.Color.White;
+            this.UpdateAdress.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateAdress.ForeColor = System.Drawing.Color.White;
+            this.UpdateAdress.Location = new System.Drawing.Point(352, 232);
+            this.UpdateAdress.Name = "UpdateAdress";
+            this.UpdateAdress.Size = new System.Drawing.Size(246, 48);
+            this.UpdateAdress.TabIndex = 4;
+            // 
+            // bunifuImageButton6
+            // 
+            this.bunifuImageButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.bunifuImageButton6.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton6.Image")));
+            this.bunifuImageButton6.ImageActive = null;
+            this.bunifuImageButton6.Location = new System.Drawing.Point(594, 19);
+            this.bunifuImageButton6.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuImageButton6.Name = "bunifuImageButton6";
+            this.bunifuImageButton6.Size = new System.Drawing.Size(29, 34);
+            this.bunifuImageButton6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton6.TabIndex = 14;
+            this.bunifuImageButton6.TabStop = false;
+            this.bunifuImageButton6.Zoom = 10;
+            this.bunifuImageButton6.Click += new System.EventHandler(this.ExitButton4);
+            // 
+            // UpdateWorkTitle
+            // 
+            this.UpdateWorkTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.UpdateWorkTitle.BorderColor = System.Drawing.Color.White;
+            this.UpdateWorkTitle.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateWorkTitle.ForeColor = System.Drawing.Color.White;
+            this.UpdateWorkTitle.Location = new System.Drawing.Point(352, 183);
+            this.UpdateWorkTitle.Name = "UpdateWorkTitle";
+            this.UpdateWorkTitle.Size = new System.Drawing.Size(246, 48);
+            this.UpdateWorkTitle.TabIndex = 3;
+            // 
             // FirstName2
             // 
             this.FirstName2.AutoSize = true;
@@ -1266,58 +1333,47 @@
             this.FirstName2.ForeColor = System.Drawing.Color.White;
             this.FirstName2.Location = new System.Drawing.Point(55, 162);
             this.FirstName2.Name = "FirstName2";
-            this.FirstName2.Size = new System.Drawing.Size(75, 18);
+            this.FirstName2.Size = new System.Drawing.Size(165, 40);
             this.FirstName2.TabIndex = 8;
             this.FirstName2.Text = "First name";
             // 
-            // LastName2
+            // UpdateLastName
             // 
-            this.LastName2.AutoSize = true;
-            this.LastName2.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastName2.ForeColor = System.Drawing.Color.White;
-            this.LastName2.Location = new System.Drawing.Point(53, 211);
-            this.LastName2.Name = "LastName2";
-            this.LastName2.Size = new System.Drawing.Size(73, 18);
-            this.LastName2.TabIndex = 9;
-            this.LastName2.Text = "Last name";
+            this.UpdateLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.UpdateLastName.BorderColor = System.Drawing.Color.White;
+            this.UpdateLastName.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateLastName.ForeColor = System.Drawing.Color.White;
+            this.UpdateLastName.Location = new System.Drawing.Point(29, 232);
+            this.UpdateLastName.Name = "UpdateLastName";
+            this.UpdateLastName.Size = new System.Drawing.Size(246, 48);
+            this.UpdateLastName.TabIndex = 2;
             // 
-            // Adress2
+            // UpdateFirstName
             // 
-            this.Adress2.AutoSize = true;
-            this.Adress2.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Adress2.ForeColor = System.Drawing.Color.White;
-            this.Adress2.Location = new System.Drawing.Point(364, 211);
-            this.Adress2.Name = "Adress2";
-            this.Adress2.Size = new System.Drawing.Size(51, 18);
-            this.Adress2.TabIndex = 10;
-            this.Adress2.Text = "Adress";
+            this.UpdateFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.UpdateFirstName.BorderColor = System.Drawing.Color.White;
+            this.UpdateFirstName.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateFirstName.ForeColor = System.Drawing.Color.White;
+            this.UpdateFirstName.Location = new System.Drawing.Point(29, 183);
+            this.UpdateFirstName.Name = "UpdateFirstName";
+            this.UpdateFirstName.Size = new System.Drawing.Size(246, 48);
+            this.UpdateFirstName.TabIndex = 1;
             // 
-            // WorkTitle2
+            // label3
             // 
-            this.WorkTitle2.AutoSize = true;
-            this.WorkTitle2.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WorkTitle2.ForeColor = System.Drawing.Color.White;
-            this.WorkTitle2.Location = new System.Drawing.Point(389, 162);
-            this.WorkTitle2.Name = "WorkTitle2";
-            this.WorkTitle2.Size = new System.Drawing.Size(58, 18);
-            this.WorkTitle2.TabIndex = 14;
-            this.WorkTitle2.Text = "Job titel";
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(18, 282);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(580, 98);
-            this.dataGridView3.TabIndex = 15;
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(23, 409);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 34);
+            this.label3.TabIndex = 24;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 34F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(790, 454);
+            this.ClientSize = new System.Drawing.Size(787, 453);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -1337,18 +1393,19 @@
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1416,6 +1473,11 @@
         private ns1.BunifuCustomLabel FirstName2;
         public WindowsFormsControlLibrary1.BunifuCustomTextbox UpdateLastName;
         public WindowsFormsControlLibrary1.BunifuCustomTextbox UpdateFirstName;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

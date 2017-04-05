@@ -57,7 +57,6 @@ namespace QueryGenerator
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void SelectButton(object sender, EventArgs e)
@@ -109,7 +108,17 @@ namespace QueryGenerator
             string adress = AddAdress.Text;
             string lastname = AddLasName.Text;
             string worktitle = AddWorkTitle.Text;
-            service.AddEmployee(ssn, firstname, adress, lastname, worktitle);
+            if(ssn == "" || firstname == "" || adress == "" || lastname == "" || worktitle == "")
+            {
+                label1.Text = "Please fill out all fields";
+                return;
+            }
+            else
+            {
+                service.AddEmployee(ssn, firstname, adress, lastname, worktitle);
+                dataGridView4.DataSource = service.FindEmployee(ssn);
+                label1.Text = "Success";
+            }
         }
 
         private void FindUpdateButton(object sender, EventArgs e)
@@ -121,7 +130,17 @@ namespace QueryGenerator
         private void FindDeleteButton(object sender, EventArgs e)
         {
             string load = FindSSN2.Text;
-            dataGridView2.DataSource = service.FindEmployee(load);
+            if (load == "")
+            {
+                label3.Text = "Please fill in No_";
+                return;
+            }
+            else
+            {
+                dataGridView2.DataSource = service.FindEmployee(load);
+                label3.Text = "Success";
+            }
+
         }
 
         private void UpdateUpdateButton(object sender, EventArgs e)
@@ -131,13 +150,25 @@ namespace QueryGenerator
             string uadress = UpdateAdress.Text;
             string ulastname = UpdateLastName.Text;
             string uworktitle = UpdateWorkTitle.Text;
-            service.UpdateEmployee(ssn, ufirstname, uadress, ulastname, uworktitle);
+            if (ssn == "" || ufirstname == "" || uadress == "" || ulastname == "" || uworktitle == "")
+            {
+                label2.Text = "Please fill out all fields";
+                return;
+            }
+            else
+            {
+                service.UpdateEmployee(ssn, ufirstname, uadress, ulastname, uworktitle);
+                dataGridView3.DataSource = service.FindEmployee(ssn);
+                label2.Text = "Success";
+            }
+
         }
 
         private void DeleteDeleteButton(object sender, EventArgs e)
         {
             string load = FindSSN2.Text;
             service.DeleteEmploye(load);
+            dataGridView2.DataSource = service.FindEmployee(load);
         }
 
         private void DeleteEmployeeDataGrid(object sender, DataGridViewCellEventArgs e)
@@ -210,47 +241,53 @@ namespace QueryGenerator
 
         private void TaskButton1(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = service.Get();
+            dataGridView1.DataSource = service.Get1();
         }
 
         private void TaskButton2(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = service.Get1();
+            dataGridView1.DataSource = service.Get2();
         }
 
         private void TaskButton3(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = service.Get2();
+            dataGridView1.DataSource = service.Get3();
+           
         }
 
         private void TaskButton4(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = service.Get3();
+            dataGridView1.DataSource = service.Get4();
         }
 
         private void TaskButton5(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = service.Get4();
+            dataGridView1.DataSource = service.Get5();
         }
 
         private void TaskButton6(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = service.Get5();
+            dataGridView1.DataSource = service.Get6();
         }
 
         private void TaskButton7(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = service.Get6();
+            dataGridView1.DataSource = service.Get7();
         }
 
         private void TaskButton8(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = service.Get7();
+            dataGridView1.DataSource = service.Get8();
         }
 
         private void TaskButton9(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = service.Get8();
+            dataGridView1.DataSource = service.Get9();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

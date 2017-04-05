@@ -16,13 +16,6 @@ namespace WindowsFormsApplication3.ServiceReference1 {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.WebService2Soap")]
     public interface WebService2Soap {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Get", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataTable Get();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Get", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataTable> GetAsync();
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Get1", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Data.DataTable Get1();
@@ -32,22 +25,13 @@ namespace WindowsFormsApplication3.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Get2", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        string[] Get2();
+        System.Data.DataTable Get2();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Get2", ReplyAction="*")]
-        System.Threading.Tasks.Task<string[]> Get2Async();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/java", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
-        object[] java();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/java", ReplyAction="*")]
-        System.Threading.Tasks.Task<object[]> javaAsync();
+        System.Threading.Tasks.Task<System.Data.DataTable> Get2Async();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Get3", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
         System.Data.DataTable Get3();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Get3", ReplyAction="*")]
@@ -55,7 +39,6 @@ namespace WindowsFormsApplication3.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Get4", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
         System.Data.DataTable Get4();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Get4", ReplyAction="*")]
@@ -63,7 +46,6 @@ namespace WindowsFormsApplication3.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Get5", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
         System.Data.DataTable Get5();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Get5", ReplyAction="*")]
@@ -71,7 +53,6 @@ namespace WindowsFormsApplication3.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Get6", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
         System.Data.DataTable Get6();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Get6", ReplyAction="*")]
@@ -79,7 +60,6 @@ namespace WindowsFormsApplication3.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Get7", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
         System.Data.DataTable Get7();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Get7", ReplyAction="*")]
@@ -87,15 +67,20 @@ namespace WindowsFormsApplication3.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Get8", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
         System.Data.DataTable Get8();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Get8", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataTable> Get8Async();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Get9", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataTable Get9();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Get9", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataTable> Get9Async();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/FindUpdateEmployee", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
         System.Data.DataTable FindUpdateEmployee(string upnr);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/FindUpdateEmployee", ReplyAction="*")]
@@ -103,7 +88,6 @@ namespace WindowsFormsApplication3.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteEmploye", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
         void DeleteEmploye(string delnr);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteEmploye", ReplyAction="*")]
@@ -111,7 +95,6 @@ namespace WindowsFormsApplication3.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddEmployee", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
         void AddEmployee(string sosnr, string name, string adress, string lastname, string worktitle);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddEmployee", ReplyAction="*")]
@@ -119,7 +102,6 @@ namespace WindowsFormsApplication3.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateEmployee", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
         void UpdateEmployee(string sosnr, string name, string adress, string lastname, string worktitle);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateEmployee", ReplyAction="*")]
@@ -133,14 +115,6 @@ namespace WindowsFormsApplication3.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/objects", ReplyAction="*")]
         System.Threading.Tasks.Task<object[]> objectsAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/dsToArray", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
-        object[] dsToArray();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/dsToArray", ReplyAction="*")]
-        System.Threading.Tasks.Task<object[]> dsToArrayAsync();
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/FindEmployee", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
@@ -148,6 +122,169 @@ namespace WindowsFormsApplication3.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/FindEmployee", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataTable> FindEmployeeAsync(string sosnr);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetWebsiteHtml", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
+        string GetWebsiteHtml(string url);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetWebsiteHtml", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> GetWebsiteHtmlAsync(string url);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/objects2", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
+        object[] objects2();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/objects2", ReplyAction="*")]
+        System.Threading.Tasks.Task<object[]> objects2Async();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/sqlstring", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
+        System.Data.DataTable sqlstring();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/sqlstring", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataTable> sqlstringAsync();
+        
+        // CODEGEN: Parameter 'contents' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Upload", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
+        WindowsFormsApplication3.ServiceReference1.UploadResponse Upload(WindowsFormsApplication3.ServiceReference1.UploadRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Upload", ReplyAction="*")]
+        System.Threading.Tasks.Task<WindowsFormsApplication3.ServiceReference1.UploadResponse> UploadAsync(WindowsFormsApplication3.ServiceReference1.UploadRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/txtFile", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
+        string txtFile(string filename);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/txtFile", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> txtFileAsync(string filename);
+        
+        // CODEGEN: Parameter 'JavaUppgiftWebserviceResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayItemAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JavaUppgiftWebservice", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
+        WindowsFormsApplication3.ServiceReference1.JavaUppgiftWebserviceResponse JavaUppgiftWebservice(WindowsFormsApplication3.ServiceReference1.JavaUppgiftWebserviceRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JavaUppgiftWebservice", ReplyAction="*")]
+        System.Threading.Tasks.Task<WindowsFormsApplication3.ServiceReference1.JavaUppgiftWebserviceResponse> JavaUppgiftWebserviceAsync(WindowsFormsApplication3.ServiceReference1.JavaUppgiftWebserviceRequest request);
+        
+        // CODEGEN: Parameter 'JavaFindUpdateResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayItemAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JavaFindUpdate", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
+        WindowsFormsApplication3.ServiceReference1.JavaFindUpdateResponse JavaFindUpdate(WindowsFormsApplication3.ServiceReference1.JavaFindUpdateRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/JavaFindUpdate", ReplyAction="*")]
+        System.Threading.Tasks.Task<WindowsFormsApplication3.ServiceReference1.JavaFindUpdateResponse> JavaFindUpdateAsync(WindowsFormsApplication3.ServiceReference1.JavaFindUpdateRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Upload", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class UploadRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] contents;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public string filenamesave;
+        
+        public UploadRequest() {
+        }
+        
+        public UploadRequest(byte[] contents, string filenamesave) {
+            this.contents = contents;
+            this.filenamesave = filenamesave;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UploadResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class UploadResponse {
+        
+        public UploadResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JavaUppgiftWebservice", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class JavaUppgiftWebserviceRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public int i;
+        
+        public JavaUppgiftWebserviceRequest() {
+        }
+        
+        public JavaUppgiftWebserviceRequest(int i) {
+            this.i = i;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JavaUppgiftWebserviceResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class JavaUppgiftWebserviceResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("ArrayOfString")]
+        [System.Xml.Serialization.XmlArrayItemAttribute(NestingLevel=1)]
+        public string[][] JavaUppgiftWebserviceResult;
+        
+        public JavaUppgiftWebserviceResponse() {
+        }
+        
+        public JavaUppgiftWebserviceResponse(string[][] JavaUppgiftWebserviceResult) {
+            this.JavaUppgiftWebserviceResult = JavaUppgiftWebserviceResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JavaFindUpdate", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class JavaFindUpdateRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public string upnr;
+        
+        public JavaFindUpdateRequest() {
+        }
+        
+        public JavaFindUpdateRequest(string upnr) {
+            this.upnr = upnr;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="JavaFindUpdateResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class JavaFindUpdateResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("ArrayOfString")]
+        [System.Xml.Serialization.XmlArrayItemAttribute(NestingLevel=1)]
+        public string[][] JavaFindUpdateResult;
+        
+        public JavaFindUpdateResponse() {
+        }
+        
+        public JavaFindUpdateResponse(string[][] JavaFindUpdateResult) {
+            this.JavaFindUpdateResult = JavaFindUpdateResult;
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -177,14 +314,6 @@ namespace WindowsFormsApplication3.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public System.Data.DataTable Get() {
-            return base.Channel.Get();
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataTable> GetAsync() {
-            return base.Channel.GetAsync();
-        }
-        
         public System.Data.DataTable Get1() {
             return base.Channel.Get1();
         }
@@ -193,20 +322,12 @@ namespace WindowsFormsApplication3.ServiceReference1 {
             return base.Channel.Get1Async();
         }
         
-        public string[] Get2() {
+        public System.Data.DataTable Get2() {
             return base.Channel.Get2();
         }
         
-        public System.Threading.Tasks.Task<string[]> Get2Async() {
+        public System.Threading.Tasks.Task<System.Data.DataTable> Get2Async() {
             return base.Channel.Get2Async();
-        }
-        
-        public object[] java() {
-            return base.Channel.java();
-        }
-        
-        public System.Threading.Tasks.Task<object[]> javaAsync() {
-            return base.Channel.javaAsync();
         }
         
         public System.Data.DataTable Get3() {
@@ -257,6 +378,14 @@ namespace WindowsFormsApplication3.ServiceReference1 {
             return base.Channel.Get8Async();
         }
         
+        public System.Data.DataTable Get9() {
+            return base.Channel.Get9();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataTable> Get9Async() {
+            return base.Channel.Get9Async();
+        }
+        
         public System.Data.DataTable FindUpdateEmployee(string upnr) {
             return base.Channel.FindUpdateEmployee(upnr);
         }
@@ -297,20 +426,114 @@ namespace WindowsFormsApplication3.ServiceReference1 {
             return base.Channel.objectsAsync();
         }
         
-        public object[] dsToArray() {
-            return base.Channel.dsToArray();
-        }
-        
-        public System.Threading.Tasks.Task<object[]> dsToArrayAsync() {
-            return base.Channel.dsToArrayAsync();
-        }
-        
         public System.Data.DataTable FindEmployee(string sosnr) {
             return base.Channel.FindEmployee(sosnr);
         }
         
         public System.Threading.Tasks.Task<System.Data.DataTable> FindEmployeeAsync(string sosnr) {
             return base.Channel.FindEmployeeAsync(sosnr);
+        }
+        
+        public string GetWebsiteHtml(string url) {
+            return base.Channel.GetWebsiteHtml(url);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetWebsiteHtmlAsync(string url) {
+            return base.Channel.GetWebsiteHtmlAsync(url);
+        }
+        
+        public object[] objects2() {
+            return base.Channel.objects2();
+        }
+        
+        public System.Threading.Tasks.Task<object[]> objects2Async() {
+            return base.Channel.objects2Async();
+        }
+        
+        public System.Data.DataTable sqlstring() {
+            return base.Channel.sqlstring();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataTable> sqlstringAsync() {
+            return base.Channel.sqlstringAsync();
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication3.ServiceReference1.UploadResponse WindowsFormsApplication3.ServiceReference1.WebService2Soap.Upload(WindowsFormsApplication3.ServiceReference1.UploadRequest request) {
+            return base.Channel.Upload(request);
+        }
+        
+        public void Upload(byte[] contents, string filenamesave) {
+            WindowsFormsApplication3.ServiceReference1.UploadRequest inValue = new WindowsFormsApplication3.ServiceReference1.UploadRequest();
+            inValue.contents = contents;
+            inValue.filenamesave = filenamesave;
+            WindowsFormsApplication3.ServiceReference1.UploadResponse retVal = ((WindowsFormsApplication3.ServiceReference1.WebService2Soap)(this)).Upload(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication3.ServiceReference1.UploadResponse> WindowsFormsApplication3.ServiceReference1.WebService2Soap.UploadAsync(WindowsFormsApplication3.ServiceReference1.UploadRequest request) {
+            return base.Channel.UploadAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication3.ServiceReference1.UploadResponse> UploadAsync(byte[] contents, string filenamesave) {
+            WindowsFormsApplication3.ServiceReference1.UploadRequest inValue = new WindowsFormsApplication3.ServiceReference1.UploadRequest();
+            inValue.contents = contents;
+            inValue.filenamesave = filenamesave;
+            return ((WindowsFormsApplication3.ServiceReference1.WebService2Soap)(this)).UploadAsync(inValue);
+        }
+        
+        public string txtFile(string filename) {
+            return base.Channel.txtFile(filename);
+        }
+        
+        public System.Threading.Tasks.Task<string> txtFileAsync(string filename) {
+            return base.Channel.txtFileAsync(filename);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication3.ServiceReference1.JavaUppgiftWebserviceResponse WindowsFormsApplication3.ServiceReference1.WebService2Soap.JavaUppgiftWebservice(WindowsFormsApplication3.ServiceReference1.JavaUppgiftWebserviceRequest request) {
+            return base.Channel.JavaUppgiftWebservice(request);
+        }
+        
+        public string[][] JavaUppgiftWebservice(int i) {
+            WindowsFormsApplication3.ServiceReference1.JavaUppgiftWebserviceRequest inValue = new WindowsFormsApplication3.ServiceReference1.JavaUppgiftWebserviceRequest();
+            inValue.i = i;
+            WindowsFormsApplication3.ServiceReference1.JavaUppgiftWebserviceResponse retVal = ((WindowsFormsApplication3.ServiceReference1.WebService2Soap)(this)).JavaUppgiftWebservice(inValue);
+            return retVal.JavaUppgiftWebserviceResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication3.ServiceReference1.JavaUppgiftWebserviceResponse> WindowsFormsApplication3.ServiceReference1.WebService2Soap.JavaUppgiftWebserviceAsync(WindowsFormsApplication3.ServiceReference1.JavaUppgiftWebserviceRequest request) {
+            return base.Channel.JavaUppgiftWebserviceAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication3.ServiceReference1.JavaUppgiftWebserviceResponse> JavaUppgiftWebserviceAsync(int i) {
+            WindowsFormsApplication3.ServiceReference1.JavaUppgiftWebserviceRequest inValue = new WindowsFormsApplication3.ServiceReference1.JavaUppgiftWebserviceRequest();
+            inValue.i = i;
+            return ((WindowsFormsApplication3.ServiceReference1.WebService2Soap)(this)).JavaUppgiftWebserviceAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication3.ServiceReference1.JavaFindUpdateResponse WindowsFormsApplication3.ServiceReference1.WebService2Soap.JavaFindUpdate(WindowsFormsApplication3.ServiceReference1.JavaFindUpdateRequest request) {
+            return base.Channel.JavaFindUpdate(request);
+        }
+        
+        public string[][] JavaFindUpdate(string upnr) {
+            WindowsFormsApplication3.ServiceReference1.JavaFindUpdateRequest inValue = new WindowsFormsApplication3.ServiceReference1.JavaFindUpdateRequest();
+            inValue.upnr = upnr;
+            WindowsFormsApplication3.ServiceReference1.JavaFindUpdateResponse retVal = ((WindowsFormsApplication3.ServiceReference1.WebService2Soap)(this)).JavaFindUpdate(inValue);
+            return retVal.JavaFindUpdateResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication3.ServiceReference1.JavaFindUpdateResponse> WindowsFormsApplication3.ServiceReference1.WebService2Soap.JavaFindUpdateAsync(WindowsFormsApplication3.ServiceReference1.JavaFindUpdateRequest request) {
+            return base.Channel.JavaFindUpdateAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication3.ServiceReference1.JavaFindUpdateResponse> JavaFindUpdateAsync(string upnr) {
+            WindowsFormsApplication3.ServiceReference1.JavaFindUpdateRequest inValue = new WindowsFormsApplication3.ServiceReference1.JavaFindUpdateRequest();
+            inValue.upnr = upnr;
+            return ((WindowsFormsApplication3.ServiceReference1.WebService2Soap)(this)).JavaFindUpdateAsync(inValue);
         }
     }
 }

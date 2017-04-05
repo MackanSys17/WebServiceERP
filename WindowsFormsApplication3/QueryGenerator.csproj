@@ -122,6 +122,15 @@
     </Compile>
     <None Include="QueryGenerator_TemporaryKey.pfx" />
     <None Include="Service References\ServiceReference1\WebService.wsdl" />
+    <None Include="Service References\ServiceReference1\WindowsFormsApplication3.ServiceReference1.JavaFindUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\WindowsFormsApplication3.ServiceReference1.JavaUppgiftWebserviceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\WindowsFormsApplication3.ServiceReference1.UploadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
